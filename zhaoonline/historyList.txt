@@ -1,0 +1,5118 @@
+data : 
+
+
+
+
+data : 
+
+tag  : html
+attrs: [('lang', 'zh-CN')]
+data : 
+
+tag  : head
+attrs: []
+data : 
+	
+tag  : title
+attrs: []
+data : 特44（18-17）新一枚_拍品详细_赵涌在线
+data : 
+	
+tag  : meta
+attrs: [('charset', 'utf-8')]
+data : 
+	
+tag  : meta
+attrs: [('name', 'keywords'), ('content', '\xe6\x95\xa3\xe7\xa5\xa8,\xe6\x96\xb0\xe4\xb8\xad\xe5\x9b\xbd\xe9\x82\xae\xe7\xa5\xa8,\xe4\xb8\xad\xe5\x9b\xbd\xe9\x82\xae\xe7\xa5\xa8,\xe9\x82\xae\xe7\xa5\xa8\xe7\xb1\xbb')]
+data : 
+	
+tag  : meta
+attrs: [('name', 'description'), ('content', '\xe7\x89\xb944\xef\xbc\x8818-17\xef\xbc\x89\xe6\x96\xb0\xe4\xb8\x80\xe6\x9e\x9a, \xe5\x85\xa8\xe5\x93\x81, ')]
+data : 
+    
+tag  : meta
+attrs: [('name', 'viewport'), ('content', 'width=device-width,minimum-scale=1.0,maximum-scale=1.0')]
+data : 
+
+tag  : meta
+attrs: [('http-equiv', 'Content-Type'), ('content', 'text/html;charset=utf-8')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', 'http://app.zhaoonline.com:8088/javascripts/behavior.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/jquery/jquery.min.js?20121220')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_NPop.js')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/base.css?20121203')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/header.css?20121203')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/Zform.css')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/user_center.css')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/quickAuction.css?20130107')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/imgEffect.css')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/ZPrompt.css')]
+data : 
+	
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/autocomplete/jquery.autocomplete.css')]
+data : 
+	
+tag  : link
+attrs: [('type', 'text/css'), ('rel', 'stylesheet'), ('href', '/css/bdsstyle.css')]
+data : 
+	
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/login.js?20120621')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/jquery.placeholder.1.3.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_titlelist_beau.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_head_list.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/jquery.autocomplete.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/search/keyword.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/helpcenter/help.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/global_zhaoonlineForm.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/json2.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/bid/min/imageEffect.min.js?20120726')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/pagination.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/bid/min/bid.min.js?20120730')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/bid/min/Auction.min.js?20130110')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/bid/min/detailInit.min.js?20130110')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/ZPrompt.js')]
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript')]
+data : 
+	var config = {"contextPath": "", "pageId":"775497268", "startAt" : new Date().getTime()};
+	
+	try{
+		var auction = {"id":2068111,"auctionNo":107107002,"startAt":"2013-04-19 16:05:34","endAt":"2013-04-25 19:54:30","categoryId":178,"characterId":2,"characterName":"全品","characterDescr":"极微黄","auctionType":"1","initialPrice":1.0,"maxPrice":{"userId":2018142,"maxPrice":170,"proxyPrice":180.0,"auctionTime":29,"appId":"0","nextPrice":175,"format":"170"},"buyChargeFee":10.0,"pictures":[{"src":"http://images.zhaoonline.com/images/2013/w16/107107002A.jpg","picSize":"778X1010","s1_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_S1.jpg","s2_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_S2.jpg","m_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_M.jpg"},{"src":"http://images.zhaoonline.com/images/2013/w16/107107002B.jpg","picSize":"793X1024","s1_size":"http://images.zhaoonline.com/images/2013/w16/107107002B_S1.jpg","s2_size":"http://images.zhaoonline.com/images/2013/w16/107107002B_S2.jpg","m_size":"http://images.zhaoonline.com/images/2013/w16/107107002B_M.jpg"}],"auctionName":"特44（18-17）新一枚","status":"3","leftTime":-232260,"watching":false,"categoryPath":"100/101/143/178","isHighest":0,"currentPrice":170,"proxyPrice":180,"isMine":false,"bidTimes":29,"bidStatus":"NONE","auctionKeywords":"散票,新中国邮票,中国邮票,邮票类","detailLink":"/sanpiao/2068111.shtml","s_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_S.jpg","s1_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_S1.jpg","s2_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_S2.jpg","ss_size":"http://images.zhaoonline.com/images/2013/w16/107107002A_SS.jpg"};
+		var localInitialTime=new Date().getTime()
+		Auction.prototype.localInitialTime=localInitialTime;
+		Auction.prototype.delay=0;
+		var serverTime = '2013-04-28 12:25:30';
+		Auction.prototype.serverTime=serverTime;	
+	} catch (e){
+	}
+	
+data : 
+	
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript')]
+data : 
+	//当前页的热门帮肋项提示
+	var count = 0;
+	var pageId = '775497268';
+	
+data : 
+
+data : 
+
+tag  : body
+attrs: []
+data : 
+
+tag  : div
+attrs: [('id', 'header')]
+data : 
+	
+tag  : div
+attrs: [('class', 'w1000 center')]
+data : 
+		
+tag  : div
+attrs: [('class', 'logo pt20 pl15')]
+data : 
+			
+tag  : a
+attrs: [('href', '/'), ('class', 'a_logo'), ('title', '\xe8\xb5\xb5\xe6\xb6\x8c\xe5\x9c\xa8\xe7\xba\xbf')]
+tag  : h1
+attrs: [('class', 'h1_logo')]
+data : 赵涌在线
+data : 
+		
+data : 
+		
+tag  : div
+attrs: [('class', 'head_search pt23 pl30')]
+data : 
+		
+tag  : form
+attrs: [('action', '/search/'), ('method', 'get'), ('id', 'searchForm')]
+data : 
+			
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'channelModule'), ('value', 'trade')]
+data : 
+	        
+tag  : input
+attrs: [('type', 'text'), ('id', 'keyword'), ('name', 'keyword'), ('maxlength', '60'), ('value', ''), ('placeholder', '\xe6\x88\x90\xe4\xba\xa4\xe6\x8b\x8d\xe5\x93\x81\xe5\x90\x8d\xe7\xa7\xb0\xe6\x88\x96\xe7\xbc\x96\xe5\x8f\xb7'), ('class', 'txt')]
+data : 
+	        
+tag  : a
+attrs: [('class', 'btn search_btn')]
+data : 
+	        
+data : 
+		
+data : 
+		
+        
+        
+tag  : div
+attrs: [('class', 'head_info pt23')]
+data : 
+        	
+tag  : div
+attrs: [('class', 'input_account')]
+data : 
+            	
+tag  : div
+attrs: [('class', 'current')]
+data : michael2012z
+data : 
+                
+tag  : ul
+attrs: [('class', 'list info_sub'), ('id', 'accounts')]
+data : 
+            	
+            		
+                	
+tag  : li
+attrs: []
+tag  : a
+attrs: []
+data : 
+                	
+                	
+tag  : li
+attrs: []
+tag  : a
+attrs: []
+data : michael2012z
+data : 
+                	
+                
+				
+data : 
+            
+data : 
+            
+tag  : div
+attrs: [('class', 'input_pai has_sup')]
+tag  : a
+attrs: [('href', '/auction.shtml'), ('target', 'bidding'), ('id', 'bidding'), ('class', 'fff')]
+data : 抢拍
+tag  : sup
+attrs: []
+data : 
+            
+tag  : div
+attrs: [('class', 'input_center has_sup')]
+tag  : a
+attrs: [('href', '/user/userInfoIndex.shtml')]
+data : 用户中心
+tag  : sup
+attrs: []
+data : 2
+data : 
+            	
+            	
+                	
+tag  : ul
+attrs: [('class', 'info_sub png_bg pr5 pb16')]
+data : 
+                
+	                	
+	                    
+	                    	
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/user/unpaid.shtml'), ('target', 'unpaid')]
+data : 支付
+tag  : sup
+attrs: []
+data : 2
+data : 
+	                    
+	                    
+	                    
+				
+                	
+data : 
+                
+            
+data : 
+            
+tag  : div
+attrs: [('class', 'input_logout')]
+tag  : a
+attrs: [('href', '/logout.shtml'), ('class', 'fff')]
+data : 退出
+data : 
+            
+tag  : div
+attrs: [('class', 'help')]
+tag  : a
+attrs: [('href', '/help/162.htm')]
+data : 帮助
+data : 
+        
+data : 
+        
+	
+data : 
+
+data : 
+	
+tag  : div
+attrs: [('class', 'mainCon')]
+data : 
+	
+tag  : div
+attrs: [('id', 'quickAuction')]
+data : 
+		
+tag  : div
+attrs: [('id', 'breadcrumb')]
+data : 
+	
+tag  : p
+attrs: []
+data : 
+		
+tag  : a
+attrs: [('href', '/youpiao/')]
+data : 邮票类
+data : \
+		
+tag  : a
+attrs: [('href', '/zhongguoyoupiao/')]
+data : 中国邮票
+data : \
+		
+tag  : a
+attrs: [('href', '/xinzhongguoyoupiao/')]
+data : 新中国邮票
+data : \
+		
+tag  : a
+attrs: [('href', '/sanpiao/')]
+data : 散票
+data : 
+	
+data : 
+
+data : 
+
+		
+tag  : div
+attrs: [('class', 'clear_1')]
+data : 
+		
+tag  : div
+attrs: [('id', 'auction')]
+data : 
+			
+tag  : div
+attrs: [('id', 'show')]
+data : 
+				
+tag  : div
+attrs: [('id', 'middleImg')]
+data : 
+				
+				
+data : 
+				
+tag  : div
+attrs: [('id', 'show-imgCon')]
+data : 
+					
+tag  : div
+attrs: [('id', 'arrowPrev'), ('class', 'png')]
+data : 
+					
+tag  : div
+attrs: [('id', 'show-List')]
+data : 
+					
+tag  : div
+attrs: [('id', 'arrowNext'), ('class', 'png')]
+data : 
+				
+data : 
+			
+data : 
+			
+tag  : div
+attrs: [('id', 'info')]
+data : 
+			
+tag  : div
+attrs: [('class', 'auction DETAIL '), ('id', 'ID2068111')]
+data : 
+				
+tag  : div
+attrs: [('class', 'Id')]
+data : 2068111
+data : 
+				
+tag  : p
+attrs: [('class', 'index')]
+data : 
+				
+tag  : p
+attrs: [('class', 'No')]
+data : ＃107107002
+data : 
+				
+tag  : p
+attrs: [('class', 'status')]
+data : 
+				
+				
+				
+					
+				成交
+				
+				
+data : 
+				
+tag  : span
+attrs: [('class', 'name'), ('title', '\xe7\x89\xb944\xef\xbc\x8818-17\xef\xbc\x89\xe6\x96\xb0\xe4\xb8\x80\xe6\x9e\x9a')]
+data : 特44（18-17）新一枚
+data : 
+				
+tag  : span
+attrs: [('class', 'character')]
+data : 全品
+data : 
+				
+tag  : div
+attrs: [('class', 'description')]
+data : 极微黄
+tag  : br
+attrs: []
+data : 
+				
+				
+tag  : p
+attrs: [('class', 'attention')]
+tag  : a
+attrs: [('rel', '2068111'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+				
+				
+tag  : p
+attrs: [('class', 'time')]
+data : 
+				
+tag  : span
+attrs: []
+data : 2013-04-25 19:54:30
+tag  : span
+attrs: [('id', 'left')]
+data : 
+				
+data : 
+				
+				
+tag  : div
+attrs: [('class', 'bidFn mt5')]
+data : 
+				
+					
+tag  : p
+attrs: [('class', 'currentPrice'), ('id', 'currentPrice'), ('class', 'detail'), ('title', '\xe6\x88\x90\xe4\xba\xa4\xe4\xbb\xb7')]
+data : 187.00
+data : 
+				
+				
+				
+				
+				
+					
+data : 
+					
+					
+tag  : a
+attrs: [('class', 'record cursor')]
+data : 出价记录
+data : (
+tag  : span
+attrs: [('class', 'bidTimes')]
+data : 0
+data : )
+data : 
+					
+tag  : a
+attrs: [('class', 'bidrecord cursor')]
+data : 更多
+data : 
+					
+tag  : table
+attrs: [('cellspacing', '0'), ('border', '0'), ('cellpadding', '0'), ('class', 'recordTable')]
+data : 
+						
+tag  : colgroup
+attrs: []
+data : 
+							
+tag  : col
+attrs: [('style', 'width:70px;')]
+data : 
+							
+tag  : col
+attrs: [('style', 'width:70px')]
+data : 
+							
+tag  : col
+attrs: [('style', 'width:130px')]
+data : 
+							
+tag  : col
+attrs: [('style', 'width:67px')]
+data : 
+						
+data : 
+						
+tag  : tbody
+attrs: []
+data : 
+					
+data : 
+					
+			
+data : 
+			
+data : 
+		
+data : 
+	
+data : 
+	
+data : 
+	
+	
+tag  : input
+attrs: [('type', 'hidden'), ('id', 'userQuota'), ('value', '11380')]
+data : 
+	
+tag  : input
+attrs: [('type', 'hidden'), ('id', 'isFrozen'), ('value', 'false')]
+data : 
+	
+	
+tag  : div
+attrs: [('id', 'J-pageCover')]
+data : 
+	
+tag  : div
+attrs: [('id', 'J-imgEffect')]
+data : 
+		
+tag  : div
+attrs: [('id', 'J-Control')]
+data : 
+			
+tag  : div
+attrs: [('id', 'J-imgCon')]
+data : 
+				
+tag  : div
+attrs: [('id', 'J-Prev'), ('class', 'png')]
+data : 
+				
+tag  : div
+attrs: [('id', 'J-List')]
+data : 
+				
+tag  : div
+attrs: [('id', 'J-Next'), ('class', 'png')]
+data : 
+			
+data : 
+			
+tag  : div
+attrs: [('id', 'J-button'), ('class', 'png')]
+tag  : a
+attrs: [('href', ''), ('target', '_blank')]
+data : 新页面打开
+tag  : span
+attrs: []
+data : 关闭
+data : 
+		
+data : 
+		
+tag  : div
+attrs: [('id', 'J-Container'), ('class', 'bigCur')]
+data : 
+		
+		
+data : 
+	
+data : 
+	
+data : 
+
+tag  : div
+attrs: [('id', 'footer'), ('class', 'pt20')]
+data : 
+    
+tag  : div
+attrs: [('class', 'copyright')]
+data : 
+    	
+tag  : span
+attrs: []
+data : COPYRIGHT © 1999-2012 
+data : 
+        
+tag  : span
+attrs: []
+tag  : a
+attrs: [('href', '/')]
+data : ZHAOONLINE.COM
+data : 
+        
+tag  : span
+attrs: []
+data : CORPORATION. ALL RIGHTS RESERVED.
+data : 
+    
+data : 
+
+data : 
+	
+tag  : div
+attrs: [('class', 'infoPop')]
+data : 
+		
+tag  : h1
+attrs: []
+data : 拍品信息
+data : 
+		
+tag  : div
+attrs: [('class', 'infocon')]
+data : 
+			
+tag  : p
+attrs: []
+data : 
+			
+tag  : p
+attrs: []
+data : 
+		
+data : 
+	
+data : 
+	
+tag  : script
+attrs: [('type', 'text/javascript')]
+data : 
+try{
+	var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-6610000-1']);
+	  _gaq.push(['_setDomainName', 'zhaoonline.com']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+}catch(e){}
+
+data : 
+
+data : 
+
+data : 
+
+
+
+
+
+
+data : 
+
+tag  : html
+attrs: [('lang', 'zh-CN')]
+data : 
+
+tag  : head
+attrs: []
+data : 
+
+
+
+tag  : title
+attrs: []
+data : 成交记录_掌握最真实、最及时的邮币卡价格行情_赵涌在线
+data : 
+
+tag  : meta
+attrs: [('name', 'keywords'), ('content', '\xe9\x82\xae\xe7\xa5\xa8\xe4\xbb\xb7\xe6\xa0\xbc\xe6\x9f\xa5\xe8\xaf\xa2,\xe9\x82\xae\xe7\xa5\xa8\xe8\xa1\x8c\xe6\x83\x85,\xe9\x82\xae\xe7\xa5\xa8\xe4\xbb\xb7\xe6\xa0\xbc\xe8\xa1\x8c\xe6\x83\x85,\xe9\x92\xb1\xe5\xb8\x81\xe4\xbb\xb7\xe6\xa0\xbc\xe6\x9f\xa5\xe8\xaf\xa2,\xe9\x92\xb1\xe5\xb8\x81\xe8\xa1\x8c\xe6\x83\x85,\xe9\x92\xb1\xe5\xb8\x81\xe4\xbb\xb7\xe6\xa0\xbc\xe8\xa1\x8c\xe6\x83\x85,\xe9\x82\xae\xe5\xb8\x81\xe5\x8d\xa1\xe4\xbb\xb7\xe6\xa0\xbc\xe8\xa1\x8c\xe6\x83\x85')]
+data : 
+
+tag  : meta
+attrs: [('name', 'description'), ('content', '\xe8\xb5\xb5\xe6\xb6\x8c\xe5\x9c\xa8\xe7\xba\xbf\xe6\xaf\x8f\xe5\xa4\xa9\xe8\xb6\x85\xe8\xbf\x871000\xe4\xbb\xb6\xe9\x82\xae\xe7\xa5\xa8\xe3\x80\x81\xe9\x92\xb1\xe5\xb8\x81\xe6\x88\x90\xe4\xba\xa4\xe8\xae\xb0\xe5\xbd\x95\xef\xbc\x8c\xe8\xae\xa9\xe6\x82\xa8\xe5\xae\x9e\xe6\x97\xb6\xe6\x8e\x8c\xe6\x8f\xa1\xe9\x82\xae\xe7\xa5\xa8\xe4\xbb\xb7\xe6\xa0\xbc\xe3\x80\x81\xe9\x92\xb1\xe5\xb8\x81\xe4\xbb\xb7\xe6\xa0\xbc\xe5\x8f\x8a\xe8\xa1\x8c\xe6\x83\x85\xe3\x80\x82\xe5\x85\xb1\xe8\xae\xa1\xe8\xb6\x85\xe8\xbf\x87150\xe4\xb8\x87\xe4\xbb\xb6\xe9\x82\xae\xe7\xa5\xa8\xe3\x80\x81\xe9\x92\xb1\xe5\xb8\x81\xe3\x80\x81\xe7\xa3\x81\xe5\x8d\xa1\xe3\x80\x81\xe9\x9b\x86\xe9\x82\xae\xe7\x94\xa8\xe5\x93\x81\xe3\x80\x81\xe7\xa4\xbc\xe5\x93\x81\xe6\x88\x90\xe4\xba\xa4\xe8\xae\xb0\xe5\xbd\x95\xe5\x8f\xaf\xe4\xbe\x9b\xe6\x9f\xa5\xe8\xaf\xa2\xe3\x80\x82')]
+data : 
+
+
+tag  : meta
+attrs: [('charset', 'utf-8')]
+data : 
+
+tag  : meta
+attrs: [('name', 'viewport'), ('content', 'width=device-width,minimum-scale=1.0,maximum-scale=1.0')]
+data : 
+
+tag  : meta
+attrs: [('http-equiv', 'Content-Type'), ('content', 'text/html;charset=utf-8')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', 'http://app.zhaoonline.com:8088/javascripts/behavior.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/jquery/jquery.min.js?20121220')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_NPop.js')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/base.css?20121213')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/header.css?20121213')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/index.css')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/list.css?20121213')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/common.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/global_zhaoonlineForm.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_titlelist_beau.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/zhao_gotop.js')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/Zform.css')]
+data : 
+
+data : 
+
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/global_menu.js?20121205')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/jquery.masonry.js')]
+data : 
+
+data : 
+
+tag  : body
+attrs: []
+data : 
+
+data : 
+
+
+
+
+
+
+
+
+
+tag  : script
+attrs: [('type', 'text/javascript')]
+data : 
+	try {
+		var _gaq = _gaq || [];
+		_gaq.push([ '_setAccount', 'UA-6610000-1' ]);
+		_gaq.push([ '_setDomainName', 'zhaoonline.com' ]);
+		_gaq.push([ '_trackPageview' ]);
+
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	} catch (e) {
+	}
+
+data : 
+
+
+tag  : script
+attrs: []
+data : 
+errorHandler=function(el,s){
+	var uri= 'http://images.zhaoonline.com/images/advertise/nopic.jpg',
+	img = new Image(),src = s;
+	if(src == uri) return;
+	if(!/\.com\/images\//g.test(src)){
+		src = src.replace(/\.com\/images(.*)/,'/images/$1');
+		img.src = src;
+	}
+	img.onerror = function(){
+		el.src = uri;
+	}
+	img.onload = function(){
+		el.src = src;
+	}
+
+}
+
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/ZPrompt.js')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/ZPrompt.css')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/jquery.placeholder.1.3.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/login.js?20121217')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/plugin/jquery.autocomplete.js')]
+data : 
+
+tag  : link
+attrs: [('rel', 'stylesheet'), ('href', '/css/autocomplete/jquery.autocomplete.css')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/usercenter_head_list.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/search/keyword.js?20130418')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript')]
+data : 
+	//是否进入香港站
+	function goHK() {
+		var goingHK = window.confirm("是否进入赵涌在线香港站？");
+		if (goingHK) {
+			window.open("http://www.zhaoonline.com.hk");
+		}
+	}
+
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', 'http://bbs.zhaoonline.com/api/uc.php?time=1367123128&code=6c3es8C7XXGR5%2FsHjJoXLyiywp2DeJn0MDoBNkQBQ4DYBvO%2BEmvVTCfXbQV%2FBA7X7RsTpvhnhpec1QGb9cfl8CKFfZfxhOo9dMiZXAfi8wfzEdPZcPPqNMKx%2FB2QKtcnslliJb7CfOUg8tE2%2BdV3VUMexkuRlnvO1URABA%2FBb0eEBKg'), ('reload', '1')]
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', 'http://www.zhaoonline.com/api/uc?time=1367123128&code=1ab1y72osr8S1CQjcPWvDirU4ntePNI6FTX2fu7J5od4S%2Bf6RECrXp9QLm1qNnnqUCpNYKchlzScmPU35zYIS1WRAJWQJmHlQnjM7aj9lQ6s5yTtvONspMaQwmy%2FW6qaOjGQ%2FaKLB%2BDOscOvtdWN76qxbVgkCQxXAYmoTeXNVAaukJo'), ('reload', '1')]
+data : 
+
+data : 
+
+tag  : div
+attrs: [('id', 'header')]
+data : 
+	
+tag  : div
+attrs: [('class', 'w1000 center')]
+data : 
+		
+tag  : div
+attrs: [('class', 'logo pt20 pl15')]
+data : 
+		
+tag  : a
+attrs: [('href', '/'), ('class', 'a_logo block f_L'), ('title', '\xe8\xb5\xb5\xe6\xb6\x8c\xe5\x9c\xa8\xe7\xba\xbf'), ('style', 'width:160px;')]
+tag  : h1
+attrs: [('class', 'h1_logo')]
+data : 赵涌在线
+data : 
+		            
+tag  : a
+attrs: [('href', '/subject/bidding/10324.htm'), ('target', '_blank'), ('class', 'block f_L')]
+tag  : img
+attrs: [('src', '/images/global/yipai.jpg'), ('alt', ''), ('title', '')]
+data : 
+		
+data : 
+
+		
+tag  : div
+attrs: [('class', 'head_search pt23 pl30')]
+data : 
+			
+tag  : form
+attrs: [('action', '/search/'), ('method', 'get'), ('id', 'searchForm')]
+data : 
+				
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'channelModule'), ('value', 'trade')]
+data :  
+tag  : input
+attrs: [('type', 'text'), ('id', 'keyword'), ('name', 'keyword'), ('maxlength', '60'), ('value', u'\u727944\u83ca\u82b1\u65b0\u5168'), ('placeholder', '\xe6\x88\x90\xe4\xba\xa4\xe6\x8b\x8d\xe5\x93\x81\xe5\x90\x8d\xe7\xa7\xb0\xe6\x88\x96\xe7\xbc\x96\xe5\x8f\xb7'), ('class', 'txt')]
+data :  
+tag  : a
+attrs: [('class', 'btn search_btn')]
+data : 
+			
+data : 
+		
+data : 
+		
+		
+			
+tag  : div
+attrs: [('class', 'head_info pt23')]
+data : 
+				
+tag  : div
+attrs: [('class', 'input_account')]
+data : 
+					
+tag  : div
+attrs: [('class', 'current')]
+data : 
+						michael2012z
+					
+data : 
+					
+tag  : ul
+attrs: [('class', 'list info_sub'), ('id', 'accounts')]
+data : 
+						
+							
+								
+tag  : li
+attrs: []
+tag  : a
+attrs: []
+data : 
+								
+data : 
+								
+data : 
+							
+								
+tag  : li
+attrs: []
+tag  : a
+attrs: []
+data : michael2012z
+								
+data : 
+								
+data : 
+							
+						
+					
+data : 
+				
+data : 
+				
+tag  : div
+attrs: [('class', 'input_pai has_sup')]
+data : 
+					
+tag  : a
+attrs: [('href', '/auction.shtml'), ('target', 'bidding'), ('id', 'bidding'), ('class', 'fff')]
+data : 抢拍
+					
+tag  : sup
+attrs: []
+data : 
+				
+data : 
+				
+tag  : div
+attrs: [('class', 'input_center has_sup')]
+data : 
+					
+tag  : a
+attrs: [('href', '/user/userInfoIndex.shtml')]
+data : 用户中心
+					
+tag  : sup
+attrs: []
+data : 2
+					
+data : 
+
+					
+						
+tag  : ul
+attrs: [('class', 'info_sub png_bg pr5 pb16')]
+data : 
+
+							
+							
+								
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/user/unpaid.shtml'), ('target', 'unpaid')]
+data : 支付
+tag  : sup
+attrs: []
+data : 2
+									
+data : 
+								
+data : 
+								
+data : 
+							
+							
+							
+
+						
+data : 
+					
+				
+data : 
+				
+tag  : div
+attrs: [('class', 'input_logout')]
+data : 
+					
+tag  : a
+attrs: [('href', '/logout.shtml'), ('class', 'fff')]
+data : 退出
+					
+data : 
+				
+data : 
+				
+tag  : div
+attrs: [('class', 'help')]
+data : 
+					
+tag  : a
+attrs: [('href', '/help/162.htm')]
+data : 帮助
+					
+data : 
+				
+data : 
+			
+data : 
+		
+	
+data : 
+
+data : 
+
+tag  : div
+attrs: [('class', 'main-nav')]
+data : 
+	
+tag  : div
+attrs: [('class', 'w1000 center')]
+data : 
+		
+tag  : div
+attrs: [('id', 'head_menu'), ('class', 'head_menu')]
+data : 
+			
+tag  : ul
+attrs: [('id', 'xlMenu')]
+data : 
+				
+				
+					
+tag  : li
+attrs: [('class', 'level-1 znav index line')]
+tag  : a
+attrs: [('class', 'level-1'), ('href', '/')]
+data : 竞买 
+data : 
+					
+tag  : li
+attrs: [('class', 'ffgx')]
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1 znav index current jingpai line')]
+data : 
+							
+tag  : i
+attrs: []
+data : 成交
+							
+data : 
+						 
+						
+tag  : div
+attrs: [('class', 'div_arrow a12')]
+data : 
+				
+				
+				
+data : 
+				
+					
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1 znav index  jingpai')]
+data :  
+							
+tag  : a
+attrs: [('class', 'level-1 pointer '), ('href', '/subject/trade/0.htm')]
+data : 专场
+							
+data : 
+						 
+						
+					
+data : 
+
+					
+tag  : li
+attrs: [('class', 'level-1 znav  jingpai')]
+tag  : a
+attrs: [('href', '/trade/youpiao/'), ('class', 'level-1  one'), ('id', 'one')]
+data : 邮品 
+data : 
+						
+tag  : div
+attrs: [('class', 'xlMenuList one_details'), ('id', 'xlMenuListOneDetails')]
+data : 
+							
+tag  : div
+attrs: [('class', 'w960 center'), ('style', 'height: 280px')]
+data : 
+								
+tag  : div
+attrs: [('class', 'ipad_show'), ('style', 'display: none; width: 60px; float: left; margin-left: 35px; line-height: 14px; margin-top: 5px; border-right: 1px solid #fff; height: 160px')]
+data : 
+									
+tag  : a
+attrs: [('href', '/trade/youpiao/')]
+data : 全部
+data : 
+								
+data : 
+								
+tag  : ul
+attrs: [('class', 't_ul3')]
+data : 
+									
+tag  : li
+attrs: [('style', 'width: 780px')]
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/zhongguoyoupiao/')]
+data : 中国大陆 
+data :  
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/qingdaiyoupiao/')]
+data : 清代邮票 
+data :  
+tag  : a
+attrs: [('href', '/trade/minguoyoupiao/')]
+data : 民国邮票 
+data :  
+tag  : a
+attrs: [('href', '/trade/jiefangquyoupiao/')]
+data : 解放区邮票 
+data :  
+tag  : a
+attrs: [('href', '/trade/qitayoupiao/')]
+data : 其他 
+data : 
+										
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left; width: 778px;')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 72px')]
+tag  : a
+attrs: [('href', '/trade/xinzhongguoyoupiao/')]
+data : 新中国邮票 
+data :  
+data :  
+tag  : a
+attrs: [('href', '/trade/quanjinianpiao/')]
+data : 全集年票 
+data :  
+tag  : a
+attrs: [('href', '/trade/jiteyoupiao/')]
+data : 纪特邮票
+data : 
+												
+tag  : a
+attrs: [('href', '/trade/wengeyoupiao/')]
+data : 文革邮票
+data : 
+												
+tag  : a
+attrs: [('href', '/trade/bianhaoyoupiao/')]
+data : 编号邮票
+data : 
+												
+tag  : a
+attrs: [('href', '/trade/jtyoupiao/')]
+data : JT邮票
+data : 
+												
+tag  : a
+attrs: [('href', '/trade/pugaihangqianjun/')]
+data : 普改航欠军 
+data :  
+tag  : a
+attrs: [('href', '/trade/xiaobenpiao/')]
+data : 小本票 
+data :  
+tag  : a
+attrs: [('href', '/trade/xiaoxingzhang/'), ('class', 'nowrap')]
+data : 小型(版)张 
+data :  
+tag  : a
+attrs: [('href', '/trade/biannianxinyou/')]
+data : 编年新邮 
+data :  
+tag  : a
+attrs: [('href', '/trade/sanpiao/')]
+data : 散票 
+data : 
+										
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left;')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 72px')]
+tag  : a
+attrs: [('href', '/trade/fengpianjian/')]
+data : 封片简 
+data :  
+data :  
+tag  : a
+attrs: [('href', '/trade/qingdaifengpianjian/')]
+data : 清代 
+data :  
+tag  : a
+attrs: [('href', '/trade/minguofengpianjian/')]
+data : 民国 
+data :  
+tag  : a
+attrs: [('href', '/trade/jiefangqufengpianjian/')]
+data : 解放区 
+data :  
+tag  : a
+attrs: [('href', '/trade/xinzhongguofengpianjian/')]
+data : 新中国 
+data :  
+tag  : a
+attrs: [('href', '/trade/gangaofengpianjian/')]
+data : 港澳 
+data : 
+										
+data : 
+									
+tag  : li
+attrs: [('class', 'f_L')]
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', 'javascript:goHK();')]
+data : 台湾邮票 
+data :  
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : a
+attrs: [('href', 'javascript:goHK();')]
+data : 邮票 
+data :  
+tag  : a
+attrs: [('href', 'javascript:goHK();')]
+data : 小全张/小册 
+data :  
+tag  : a
+attrs: [('href', 'javascript:goHK();')]
+data : 封片简 
+data :  
+tag  : a
+attrs: [('href', 'javascript:goHK();')]
+data : 其他 
+data : 
+										
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+tag  : li
+attrs: [('class', 'f_L')]
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/gangaoyoupiao/')]
+data : 港澳邮票 
+data :  
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+									
+tag  : li
+attrs: [('class', 'f_L')]
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/qitadiquyoupiao/')]
+data : 其它地区 
+data :  
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/yazhouyoupiao/')]
+data : 亚洲 
+data :  
+tag  : a
+attrs: [('href', '/trade/ouzhouyoupiao/')]
+data : 欧洲 
+data :  
+tag  : a
+attrs: [('href', '/trade/feizhouyoupiao/')]
+data : 非洲 
+data :  
+tag  : a
+attrs: [('href', '/trade/meizhouyoupiao/')]
+data : 美洲 
+data :  
+tag  : a
+attrs: [('href', '/trade/dayangzhouyoupiao/')]
+data : 大洋洲 
+data : 
+										
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+								
+data : 
+							
+data : 
+						
+data : 
+						
+tag  : div
+attrs: [('class', 'div_arrow a11')]
+data : 
+					
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1 znav  jingpai')]
+tag  : a
+attrs: [('href', '/trade/qianbi/'), ('class', 'level-1 '), ('id', 'two')]
+data : 钱币 
+data : 
+						
+tag  : div
+attrs: [('class', 'xlMenuList three_details')]
+data : 
+							
+tag  : div
+attrs: [('class', 'w960 center'), ('style', 'height: 280px')]
+data : 
+								
+tag  : div
+attrs: [('class', 'ipad_show'), ('style', 'display: none; width: 60px; float: left; margin-left: 65px; line-height: 14px; margin-top: 5px; border-right: 1px solid #fff; height: 205px')]
+data : 
+									
+tag  : a
+attrs: [('href', '/trade/qianbi/')]
+data : 全部
+data : 
+								
+data : 
+								
+tag  : ul
+attrs: [('class', 't_ul4')]
+data : 
+									
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/jinyinbi/')]
+data : 金银币 
+data :  
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/zhongguodangdaijinyinbi/')]
+data : 
+												中国当代金银币
+											
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/zhongguoliutongjinianbi/')]
+data : 
+											中国流通纪念币
+											
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/zhongguojindaijizhibi/')]
+data : 中国近代机制币 
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/waiguojinyinbi/')]
+data : 外国金银币
+											
+data : 
+										
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+									
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/zhichao/')]
+data : 纸钞 
+data :  
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/zhongguolidaizhichao/'), ('class', 'bold')]
+data : 中国历代纸钞
+data : 
+											
+tag  : a
+attrs: [('href', '/trade/mingqingzhichao/'), ('class', 'bold ml5')]
+data : 明清
+data : 
+										
+data : 
+									
+tag  : li
+attrs: []
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left; width: 780px')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 178px')]
+tag  : a
+attrs: [('href', '/trade/minguozhichao/')]
+data : 民国 
+data :  
+data :  
+tag  : a
+attrs: [('href', '/trade/sidayinhangzhichao/')]
+data : 四大银行 
+data :  
+tag  : a
+attrs: [('href', '/trade/minguoshengshigejiyinhangzhichao/')]
+data : 省市各级银行 
+data :  
+tag  : a
+attrs: [('href', '/trade/shangyeyinhangzhichao/')]
+data : 商业银行 
+data :  
+tag  : a
+attrs: [('href', '/trade/yangshangkechao/')]
+data : 洋商客钞 
+data :  
+tag  : a
+attrs: [('href', '/trade/junyongpiao/')]
+data : 军用票 
+data :  
+tag  : a
+attrs: [('href', '/trade/jiefangquzhichao/')]
+data : 解放区 
+data :  
+tag  : a
+attrs: [('href', '/trade/riweizhengquanhuobi/')]
+data : 日伪政权货币 
+data :  
+tag  : a
+attrs: [('href', '/trade/difangsipiao/')]
+data : 地方私票 
+data : 
+										
+data : 
+									
+tag  : li
+attrs: []
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left; width: 780px')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 178px')]
+tag  : a
+attrs: [('href', '/trade/xinzhongguozhichao/')]
+data : 新中国 
+data :  
+data :  
+tag  : a
+attrs: [('href', '/trade/diyibanrenminbi/')]
+data : 第一版人民币 
+data :  
+tag  : a
+attrs: [('href', '/trade/dierbanrenminbi/')]
+data : 第二版人民币 
+data :  
+tag  : a
+attrs: [('href', '/trade/disanbanrenminbi/')]
+data : 第三版人民币 
+data :  
+tag  : a
+attrs: [('href', '/trade/waihuiduihuanquan/')]
+data : 外汇兑换券 
+data :  
+tag  : a
+attrs: [('href', '/trade/liantichao-jinianchao/')]
+data : 连体钞/纪念钞 
+data : 
+										
+data : 
+									
+tag  : li
+attrs: []
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left; width: 780px')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 178px')]
+tag  : a
+attrs: [('href', '/trade/xianggangzhichao/')]
+data : 香港 
+data :  
+data :  
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/aomenzhichao/')]
+data : 澳门 
+data :  
+data :  
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/taiwanzaoqizhichao/')]
+data : 台湾早期 
+data :  
+data :  
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/gupiao-zhaiquan/')]
+data : 股票/债券 
+data :  
+data : 
+										
+data : 
+									
+tag  : li
+attrs: []
+data : 
+										
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+											
+tag  : label
+attrs: [('style', 'margin-left: 79px')]
+tag  : a
+attrs: [('href', '/trade/waiguozhichao/')]
+data : 外国
+													纸钞 
+data :  
+data : 
+										
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/tongzhang/')]
+data : 铜章 
+data :  
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+									
+										
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/guqian/')]
+data : 古钱 
+data :  
+data : 
+											
+tag  : p
+attrs: [('style', 'float: left')]
+data : 
+												
+tag  : a
+attrs: [('href', '/trade/xianqinzhiwudaishiguoguqian/')]
+data : 先秦至五代十国
+												
+data :  
+tag  : a
+attrs: [('href', '/trade/songzhiyuandaiguqian/')]
+data : 宋至元代
+												
+data :  
+tag  : a
+attrs: [('href', '/trade/mingzhiqingdaiguqian/')]
+data : 明至 清代
+												
+data :  
+tag  : a
+attrs: [('href', '/trade/lidaihuaqian/')]
+data : 历代花钱
+												
+data : 
+											
+data : 
+											
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+									
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/yinding/')]
+data : 银锭 
+data :  
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+									
+tag  : li
+attrs: []
+tag  : label
+attrs: [('class', 'w60 tr')]
+tag  : a
+attrs: [('href', '/trade/qitaqianbi/')]
+data : 其他 
+data :  
+data : 
+										
+tag  : div
+attrs: [('class', 'c_B')]
+data : 
+									
+data : 
+								
+data : 
+
+							
+data : 
+						
+data : 
+						
+tag  : div
+attrs: [('class', 'div_arrow a11')]
+data : 
+					
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1 znav  jingpai')]
+tag  : a
+attrs: [('href', '/trade/wenxian/'), ('class', 'level-1 '), ('id', 'three')]
+data : 文献 
+data :  
+
+tag  : div
+attrs: [('class', 'xlMenuList four_details'), ('style', 'padding-left:80px')]
+data : 
+                    	
+tag  : div
+attrs: [('class', 'w960 center'), ('style', 'height:280px;')]
+data : 
+                      		 
+tag  : div
+attrs: [('class', 'ipad_show'), ('style', 'display:none;width:60px;float:left;margin-left:105px;line-height:14px;margin-top:5px;border-right:1px solid #fff;height:180px')]
+tag  : a
+attrs: [('href', '/trade/wenxian/')]
+data : 全部
+data : 
+                      		 
+tag  : ul
+attrs: [('class', 'ul5')]
+data : 
+                                
+tag  : li
+attrs: [('style', 'width:780px')]
+data : 
+                                	
+tag  : label
+attrs: [('class', 'w55'), ('style', 'text-align:left')]
+tag  : a
+attrs: [('href', '/trade/zhiza/')]
+data : 纸杂
+data :  
+                                	
+tag  : p
+attrs: [('style', 'float:left')]
+data : 
+                                    	
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/gujishanben/')]
+data : 古籍善本
+data :  
+data : 
+                                    	
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/lishiwenxian/')]
+data : 历史文献
+data :  
+data : 
+                                    	
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/gumeishuwenxian/')]
+data : 古美术文献
+data :  
+data : 
+                                        
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/yutu/')]
+data : 舆图
+data :  
+data : 
+                                        
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/huace/')]
+data : 画册
+data :  
+data : 
+                                    
+data : 
+                                	
+tag  : p
+attrs: [('style', 'float:left; width:778px;')]
+data : 
+                                    	
+tag  : label
+attrs: [('style', 'margin-left:72px')]
+data : 
+                                        	
+tag  : a
+attrs: [('href', '/trade/gonghanchengwenlei/')]
+data : 公函呈文类
+data : 
+                                        
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/gongtingchengwen/')]
+data : 宫廷呈文
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/zhengfugonghan/')]
+data : 政府公函
+data : 
+                                    
+data : 
+                                    
+tag  : p
+attrs: [('style', 'float:left; width:778px;')]
+data : 
+                                    	
+tag  : label
+attrs: [('style', 'margin-left:72px')]
+data : 
+                                        	
+tag  : a
+attrs: [('href', '/trade/piaozhengdanjulei/')]
+data : 票证单据类
+data : 
+                                        
+data :  
+                                    
+data : 
+                                    
+tag  : p
+attrs: [('style', 'float:left; width:778px;')]
+data : 
+                                    	
+tag  : label
+attrs: [('style', 'margin-left:72px')]
+data : 
+                                        	
+tag  : a
+attrs: [('href', '/trade/yingxianglei/')]
+data : 影像类
+data : 
+                                        
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/zhaopian/')]
+data : 照片
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/yingji/')]
+data : 影集
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/yingxiangziliao/')]
+data : 影像资料
+data : 
+                                    
+data : 
+                                    
+tag  : p
+attrs: [('style', 'float:left; width:778px;')]
+data : 
+                                    	
+tag  : label
+attrs: [('style', 'margin-left:72px')]
+data : 
+                                        	
+tag  : a
+attrs: [('href', '/trade/shuhualei/')]
+data : 书画类
+data : 
+                                        
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/mingjiamoji/')]
+data : 名家墨迹
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/shouhuihuagao/')]
+data : 手绘画稿
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/mubanshuiyin/')]
+data : 木版水印
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/banhua/')]
+data : 版画
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/fuzhihua/')]
+data : 复制画
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/xuanchuanhua/')]
+data : 宣传画
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/beita/')]
+data : 碑拓
+data :  
+                                    
+data : 
+                                    
+tag  : p
+attrs: [('style', 'float:left; width:778px;')]
+data : 
+                                    	
+tag  : label
+attrs: [('style', 'margin-left:72px')]
+data : 
+                                        	
+tag  : a
+attrs: [('href', '/trade/wenfangsibaolei/')]
+data : 文房四宝类
+data : 
+                                        
+data :  
+                                    
+data : 
+                                
+data : 
+                                
+tag  : li
+attrs: [('style', 'width:780px')]
+data : 
+                                    
+tag  : label
+attrs: [('class', 'w55'), ('style', 'text-align:left')]
+tag  : a
+attrs: [('href', '/trade/youbishukan/')]
+data : 书刊
+data : 
+                                    
+tag  : p
+attrs: [('style', 'float:left;')]
+data : 
+                                    	
+tag  : a
+attrs: [('href', '/trade/wenji/')]
+data : 文集
+data :  
+                                        
+tag  : a
+attrs: [('href', '/trade/mulugongjushu/')]
+data : 目录工具书
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/baozhiqikan/')]
+data : 报纸期刊
+data : 
+                                        
+tag  : a
+attrs: [('href', '/trade/paimaitulu/')]
+data : 拍卖图录
+data :  
+                                    
+data : 
+                                
+data : 
+                                
+tag  : li
+attrs: [('style', 'width:780px')]
+data : 
+                                    
+tag  : label
+attrs: []
+tag  : a
+attrs: [('href', '/trade/zongheqita/')]
+data : 综合其他
+data :  
+                                	
+tag  : div
+attrs: [('style', 'clear:both;height:1px;visibility:hidden')]
+data : 
+                                
+data : 
+                            
+data : 
+                    	
+data : 
+                    
+data : 
+					
+tag  : div
+attrs: [('class', 'div_arrow a11')]
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1  znav jingpai')]
+tag  : a
+attrs: [('href', '/trade/qita/'), ('class', 'level-1 pr0 '), ('id', 'four')]
+data : 其他 
+data : 
+						
+tag  : div
+attrs: [('class', 'xlMenuList five_details')]
+data : 
+							
+tag  : div
+attrs: [('class', 'w960 center'), ('style', 'height: 280px;')]
+data : 
+								
+tag  : div
+attrs: [('class', 'ipad_show'), ('style', 'display:none;width:60px;float:left;margin-left:300px;line-height:14px;margin-top:10px;border-right:1px solid #fff;height:180px')]
+data : 
+									
+tag  : a
+attrs: [('href', '/trade/qita/')]
+data : 全部
+data : 
+								
+data : 
+								
+tag  : ul
+attrs: [('class', 't_ul6')]
+data : 
+									
+tag  : li
+attrs: [('style', 'width: 400px; text-align: left; float: left')]
+tag  : a
+attrs: [('href', '/trade/cika/')]
+data :  磁卡 
+tag  : br
+attrs: []
+data :  
+									
+tag  : a
+attrs: [('href', '/trade/zaxiang/')]
+data :  杂项
+tag  : br
+attrs: []
+data : 
+									
+tag  : a
+attrs: [('href', '/trade/qitaqita/')]
+data :  其他 
+tag  : br
+attrs: []
+data : 
+									
+tag  : a
+attrs: [('href', '/trade/yaanyipai/')]
+data : 雅安义拍 
+data : 
+										
+data : 
+								
+data : 
+							
+data : 
+						
+data : 
+						
+tag  : div
+attrs: [('class', 'div_arrow a11')]
+data : 
+					
+data : 
+				
+
+				
+					
+tag  : li
+attrs: [('class', 'fgx')]
+data : 
+					
+tag  : li
+attrs: [('class', 'level-1 znav index  line')]
+tag  : a
+attrs: [('href', '/consignor/advantages-terms.shtml'), ('class', 'level-1')]
+data : 委托
+					
+data : 
+				
+				
+				
+				
+tag  : li
+attrs: [('class', 'level-1 znav index line')]
+tag  : a
+attrs: [('href', 'http://mall.zhaoonline.com'), ('class', 'level-1')]
+data : 商城 
+data : 
+				
+tag  : li
+attrs: [('class', 'level-1 znav index line')]
+tag  : a
+attrs: [('href', 'http://bbs.zhaoonline.com'), ('class', 'level-1')]
+data : 论坛 
+data : 
+				
+tag  : li
+attrs: [('class', 'level-1 znav index jfy'), ('style', 'float: right')]
+tag  : a
+attrs: [('href', '/'), ('rel', 'zh_CN'), ('class', 'switch_language f_L f14 h40 lh41 bold pl10')]
+data : 简 
+tag  : span
+attrs: [('class', 'f_L block f14 lh41 h40 bold pl2pr2')]
+data : /
+data :  
+tag  : a
+attrs: [('href', '/'), ('rel', 'zh_TW'), ('class', 'switch_language f_L f14 lh41 h40 bold')]
+data : 繁 
+tag  : span
+attrs: [('class', 'f_L block f14 lh41 h40 bold pl2pr2')]
+data : /
+data :  
+tag  : a
+attrs: [('href', 'http://english.zhaoonline.com'), ('class', 'f_L f14 lh41 h40 bold pr15')]
+data : EN
+data : 
+				
+data : 
+				
+tag  : li
+attrs: [('class', 'level-1 znav index four line'), ('style', 'float: right')]
+tag  : a
+attrs: [('href', 'http://www.zhaoonline.com.hk'), ('class', 'level-1'), ('style', 'width: 45px;padding-right:2px;')]
+data : 香港站 
+data : 
+				
+tag  : li
+attrs: [('class', 'level-1 znav index four line'), ('style', 'float: right')]
+tag  : a
+attrs: [('href', '/ad/client/iphoneandroid.html'), ('class', 'level-1'), ('style', 'width: 45px;padding-right:2px; ')]
+data : 移动版 
+data : 
+				
+				
+tag  : li
+attrs: [('style', 'float: right'), ('class', 'level-1 znav index four line')]
+tag  : a
+attrs: [('target', '_blank'), ('style', 'width: 35px;padding-left:25px;padding-right:1px;background:url(/images/index/icon_weibo_zhaoonline.png) no-repeat 5px;'), ('class', 'level-1 weibo'), ('href', 'http://e.weibo.com/zhaoonline?ref=http%3A%2F%2Fweibo.com%2Fminilanbo%3Fwvr%3D5%26wvr%3D5%26lf%3Dreg')]
+data : 微博 
+data : 
+				
+tag  : li
+attrs: [('style', 'float: right'), ('class', 'level-1 znav index four line')]
+tag  : a
+attrs: [('style', 'width: 35px;padding-left:25px;padding-right:1px;background:url(/images/index/icon_weixin_zhaoonline.png) no-repeat 5px;'), ('class', 'level-1 weixin'), ('href', 'http://www.zhaoonline.com/help/241.htm')]
+data : 微信 
+data : 
+			
+data : 
+			
+data : 
+			
+tag  : div
+attrs: [('style', 'display: none;'), ('id', 'xlMenuCon'), ('class', 'xlMenuCon')]
+data : 
+		
+data : 
+		
+tag  : div
+attrs: [('class', 'clear')]
+data : 
+	
+data : 
+
+data : 
+
+
+data : 
+
+
+tag  : div
+attrs: [('class', 'mainCon_trade')]
+data : 
+
+data : 
+ 
+
+    
+tag  : div
+attrs: [('class', 'list_title')]
+data : 
+    	
+tag  : h1
+attrs: [('class', 'toolong block ml200'), ('style', 'text-align:left; width:780px; overflow:hidden')]
+data : 
+    		成交记录  
+data : 44
+data : 
+    	
+data : 
+  	
+data : 
+
+
+
+data : 
+
+
+tag  : div
+attrs: [('class', 'w1000 center listCon1 mb40')]
+data : 
+
+
+
+
+
+
+
+tag  : form
+attrs: [('id', 'queryForm')]
+data : 
+
+tag  : div
+attrs: [('id', '_left'), ('class', 'min_height')]
+data : 
+
+
+
+
+
+
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/search/query.js?20130421')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/common/list_check_alls.js')]
+data : 
+
+tag  : script
+attrs: [('type', 'text/javascript'), ('src', '/js/date/WdatePicker.js')]
+data : 
+
+data : 
+
+tag  : div
+attrs: [('class', 'left_sidebar beau')]
+data : 
+
+
+tag  : div
+attrs: [('class', 'side_box mb10 side_box_1 bb1e5')]
+data : 
+
+tag  : div
+attrs: [('class', 'update')]
+data : 
+	
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.types'), ('value', '1'), ('id', 'bid'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'bid')]
+data : 竞拍
+data : 
+	
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.types'), ('value', '0'), ('id', 'buyout'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'buyout')]
+data : 一口价
+data : 
+
+data : 
+
+data : 
+
+data : 
+
+
+
+
+tag  : div
+attrs: [('class', 'side_box side_box_2'), ('id', 'category')]
+data : 
+	
+tag  : h2
+attrs: [('class', 'fenlei')]
+tag  : a
+attrs: [('class', 'white')]
+data : 分类
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px;')]
+data : 
+	
+tag  : ul
+attrs: [('class', 'pt5 pb5 pinxiangshow '), ('id', 'fenlei_details')]
+data : 
+	
+	
+	
+	
+   		
+tag  : li
+attrs: [('class', 'zhengge')]
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('id', 'all_choice_category'), ('class', 'check_all'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'all_choice_category')]
+data : 全选
+data : 
+	
+   	
+		
+tag  : li
+attrs: [('class', 'zhengge')]
+tag  : i
+attrs: [('class', 'mb5')]
+data : 
+			
+tag  : input
+attrs: [('type', 'checkbox'), ('id', 'category_100'), ('value', '100'), ('checked', 'checked'), ('class', 'check_all root')]
+tag  : label
+attrs: [('for', 'category_100'), ('class', 'toolong w100'), ('title', u'\u90ae\u7968\u7c7b')]
+data : 
+		
+data : 
+		
+			
+tag  : li
+attrs: [('class', 'pl30 pt5')]
+data : 
+				
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.categoryIds'), ('id', 'category_146'), ('rel', 'category_100'), ('value', '146'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'category_146'), ('class', 'toolong w100'), ('title', u'\u7eaa\u7279\u90ae\u7968 (925)')]
+data :  (925)
+data : 	
+data : 
+			
+data : 
+		
+			
+tag  : li
+attrs: [('class', 'pl30 pt5')]
+data : 
+				
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.categoryIds'), ('id', 'category_178'), ('rel', 'category_100'), ('value', '178'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'category_178'), ('class', 'toolong w100'), ('title', u'\u6563\u7968 (2)')]
+data :  (2)
+data : 	
+data : 
+			
+data : 
+		
+			
+tag  : li
+attrs: [('class', 'pl30 pt5')]
+data : 
+				
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.categoryIds'), ('id', 'category_154'), ('rel', 'category_100'), ('value', '154'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'category_154'), ('class', 'toolong w100'), ('title', u'\u5c01\u7247\u7b80 (2)')]
+data :  (2)
+data : 	
+data : 
+			
+data : 
+		
+			
+tag  : li
+attrs: [('class', 'pl30 pt5')]
+data : 
+				
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.categoryIds'), ('id', 'category_467'), ('rel', 'category_100'), ('value', '467'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'category_467'), ('class', 'toolong w100'), ('title', u'\u65b0\u4e2d\u56fd (1)')]
+data :  (1)
+data : 	
+data : 
+			
+data : 
+		
+			
+tag  : li
+attrs: [('class', 'pl30 pt5')]
+data : 
+				
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.categoryIds'), ('id', 'category_165'), ('rel', 'category_100'), ('value', '165'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'category_165'), ('class', 'toolong w100'), ('title', u'\u4e2d\u56fd\u90ae\u7968-\u5176\u4ed6 (2)')]
+data : -
+data :  (2)
+data : 	
+data : 
+			
+data : 
+		
+	
+	
+	
+	
+data : 
+	
+tag  : div
+attrs: [('class', 'yincang display_none')]
+tag  : span
+attrs: [('class', 'show1')]
+tag  : img
+attrs: [('src', '/images/global/down.png')]
+data : 更多
+tag  : span
+attrs: [('class', 'hide1')]
+tag  : img
+attrs: [('src', '/images/global/up.png')]
+data : 收起
+data : 
+
+data : 
+
+
+
+
+tag  : div
+attrs: [('class', 'side_box side_box_3'), ('id', 'character')]
+data : 
+
+	
+tag  : h2
+attrs: [('class', 'pinxiang')]
+tag  : a
+attrs: [('class', 'white')]
+data : 品相
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px;')]
+data : 
+	
+tag  : ul
+attrs: [('class', 'pt5 pb5 pinxiangshow ')]
+data : 
+	
+	
+	
+   		
+tag  : li
+attrs: [('class', 'zhengge')]
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('id', 'all_choice_character'), ('class', 'check_all'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'all_choice_character')]
+data : 全选
+data : 
+	
+	
+		
+tag  : li
+attrs: []
+data : 
+			
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.characterIds'), ('value', '2'), ('id', 'character_2'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'character_2')]
+data : 
+		
+data : 
+	
+		
+tag  : li
+attrs: []
+data : 
+			
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.characterIds'), ('value', '3'), ('id', 'character_3'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'character_3')]
+data : 
+		
+data : 
+	
+		
+tag  : li
+attrs: []
+data : 
+			
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.characterIds'), ('value', '4'), ('id', 'character_4'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'character_4')]
+data : 
+		
+data : 
+	
+		
+tag  : li
+attrs: []
+data : 
+			
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.characterIds'), ('value', '5'), ('id', 'character_5'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'character_5')]
+data : 
+		
+data : 
+	
+		
+tag  : li
+attrs: []
+data : 
+			
+tag  : i
+attrs: []
+tag  : input
+attrs: [('type', 'checkbox'), ('name', 'q.characterIds'), ('value', '10'), ('id', 'character_10'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'character_10')]
+data :  - 
+data : 
+		
+data : 
+	
+    
+    
+data : 
+	
+tag  : div
+attrs: [('class', 'yincang display_none')]
+tag  : span
+attrs: [('class', 'show1')]
+tag  : img
+attrs: [('src', '/images/global/down.png')]
+data : 更多
+tag  : span
+attrs: [('class', 'hide1')]
+tag  : img
+attrs: [('src', '/images/global/up.png')]
+data : 收起
+data : 
+	
+
+data : 
+
+data : 
+
+tag  : div
+attrs: [('class', 'side_box side_box_3'), ('id', 'sorts')]
+data : 
+
+tag  : h2
+attrs: []
+tag  : a
+attrs: [('class', 'white')]
+data : 排序
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px;')]
+data : 
+
+tag  : ul
+attrs: [('class', 'pt10 pb5 pinxiangshow')]
+data : 
+  
+   
+   		 
+tag  : li
+attrs: []
+data : 
+       		
+tag  : input
+attrs: [('type', 'radio'), ('name', 'sort'), ('value', 'endDate desc'), ('id', 'px_end')]
+tag  : label
+attrs: [('for', 'px_end')]
+data : 结标时间
+data : 
+       	
+data : 
+   
+        
+tag  : li
+attrs: []
+data : 
+           	
+tag  : input
+attrs: [('type', 'radio'), ('name', 'sort'), ('value', 'maxPrice desc'), ('id', 'px_hight')]
+tag  : label
+attrs: [('for', 'px_hight')]
+data : 价格高的
+data : 
+        
+data : 
+        
+tag  : li
+attrs: []
+data : 
+           	
+tag  : input
+attrs: [('type', 'radio'), ('name', 'sort'), ('value', 'maxPrice asc'), ('id', 'px_low')]
+tag  : label
+attrs: [('for', 'px_low')]
+data : 价格低的
+data : 
+        
+data : 
+        
+tag  : li
+attrs: []
+data : 
+           	
+tag  : input
+attrs: [('type', 'radio'), ('name', 'sort'), ('value', 'auctionTime desc'), ('id', 'px_hot')]
+tag  : label
+attrs: [('for', 'px_hot')]
+data : 热门的
+data : 
+        
+data : 
+
+data : 
+
+data : 
+
+
+
+tag  : div
+attrs: [('class', 'side_box side_box_3 bgf')]
+data : 
+	
+tag  : h2
+attrs: [('class', 'pinxiang'), ('id', 'priceRange')]
+tag  : a
+attrs: [('class', 'white')]
+data : 时间
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px;')]
+data : 
+	
+tag  : div
+attrs: [('class', 'pb10'), ('style', 'clear:both;')]
+data : 
+	
+tag  : div
+attrs: [('class', 'pl10 lh24 pt10')]
+data : 
+	
+tag  : input
+attrs: [('type', 'text'), ('id', 'startAt'), ('style', 'width:135px'), ('name', 'q.dateRanges'), ('value', ''), ('placeholder', '\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4'), ('onclick', "WdatePicker({el:'startAt',dateFmt:'yyyy-MM-dd',errDealMode:1})")]
+data : 
+	
+data : 
+	
+tag  : div
+attrs: [('class', 'pl10 lh24 mt5')]
+data : 
+        
+tag  : input
+attrs: [('id', 'endAt'), ('style', 'width:135px'), ('type', 'text'), ('name', 'q.dateRanges'), ('value', ''), ('placeholder', '\xe7\xbb\x93\xe6\x9d\x9f\xe6\x97\xb6\xe9\x97\xb4'), ('onclick', "WdatePicker({el:'endAt',dateFmt:'yyyy-MM-dd',errDealMode:1})")]
+data : 
+    
+data : 
+    
+tag  : div
+attrs: [('class', 'pl10 lh24 qd pt5')]
+tag  : input
+attrs: [('type', 'button'), ('class', 'btn'), ('value', '\xe6\x90\x9c\xe7\xb4\xa2'), ('id', 'timeRangeBtn'), ('style', 'width:145px')]
+data : 
+    
+data : 
+
+data : 
+
+
+data : 
+
+
+tag  : div
+attrs: [('class', 'side_box side_box_5'), ('id', 'maxPrice')]
+data : 
+   
+tag  : h2
+attrs: []
+tag  : a
+attrs: [('class', 'white')]
+data : 价格
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px')]
+data : 
+   
+tag  : ul
+attrs: [('class', 'pt10')]
+data : 
+       
+tag  : li
+attrs: [('class', 'zhengge')]
+data : 
+       		
+tag  : input
+attrs: [('type', 'text'), ('id', 'priceStart'), ('value', '0'), ('class', 'w60 f_L number')]
+data : 
+           	
+tag  : input
+attrs: [('type', 'text'), ('id', 'priceEnd'), ('value', ''), ('placeholder', '\xe4\xb8\x8d\xe9\x99\x90'), ('class', 'w60 f_L number')]
+data : 
+       
+data : 
+   
+data : 
+
+data : 
+
+
+data : 
+
+tag  : div
+attrs: [('class', 'side_box side_box_4'), ('id', 'showType')]
+data : 
+   	
+tag  : h2
+attrs: []
+tag  : a
+attrs: [('class', 'white')]
+data : 显示
+tag  : span
+attrs: [('class', 'f_R')]
+tag  : i
+attrs: [('class', 'show'), ('style', 'top:0px')]
+data : 
+    
+tag  : ul
+attrs: [('class', 'pt10 pb5')]
+data : 
+   		
+tag  : li
+attrs: [('class', 'zhengge')]
+tag  : input
+attrs: [('type', 'radio'), ('name', 'show'), ('id', 'xs_hot'), ('value', '2'), ('checked', 'checked')]
+tag  : label
+attrs: [('for', 'xs_hot')]
+data : 多列大图
+data : 
+        
+tag  : li
+attrs: [('class', 'zhengge')]
+tag  : input
+attrs: [('type', 'radio'), ('name', 'show'), ('id', 'xs_low'), ('value', '1')]
+tag  : label
+attrs: [('for', 'xs_low')]
+data : 单列小图
+data : 
+      
+data : 
+
+data : 
+
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.show'), ('value', '2'), ('id', 'q_show')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.characterFacetSize'), ('value', '5'), ('id', 'q_ch_facetsize')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.categoryFacetSize'), ('value', '5'), ('id', 'q_c_facetsize')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.sorts'), ('value', ''), ('id', 'q_sort')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.dateRange'), ('value', 'N'), ('id', 'q_dateRange')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.dateRangeStart'), ('value', ''), ('id', 'q_dateRangeStart')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.dateRangeEnd'), ('value', ''), ('id', 'q_dateRangeEnd')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.auctionStatus'), ('value', '3'), ('id', 'q_auctionStatus')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.type'), ('value', '8'), ('id', 'q_type')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.timeRange'), ('value', '0'), ('id', 'q_timeRange')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.platform'), ('value', 'trade'), ('id', 'platform')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.categoryPinyin'), ('value', ''), ('id', 'q_categoryPinyin')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.totalCount'), ('value', '932'), ('id', 'q_totalCount')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.page'), ('value', '2'), ('id', 'currentPage')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.query'), ('value', u'\u727944\u83ca\u82b1\u65b0\u5168'), ('id', 'q_query')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.ajax'), ('value', 'true')]
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.priceRange'), ('value', 'N'), ('id', 'q_priceRange')]
+data : 
+
+data : 
+
+
+data : 
+
+data : 
+
+data : 
+
+tag  : div
+attrs: [('class', 'w780 f_L')]
+data : 
+
+tag  : div
+attrs: [('id', '_center')]
+data : 
+
+tag  : div
+attrs: [('style', 'width: 780px; float: left;'), ('id', 'center_list_id')]
+data : 
+	
+tag  : div
+attrs: [('id', 'pic_hshow')]
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:221px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:128px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/2003896.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w10/104747005A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/2003896.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-30 19:59
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,294.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '2003896'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:229px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:136px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1961828.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w05/101556001A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u5382\u94ed\u76f4\u89d2\u8fb9\u516d\u65b9\u8fde\u65b0\u5168\uff08\u90e8\u5206\u6570\u5b57\u8fb9\uff09(\u65e0)'), ('alt', u'\u727944\u83ca\u82b1\u5382\u94ed\u76f4\u89d2\u8fb9\u516d\u65b9\u8fde\u65b0\u5168\uff08\u90e8\u5206\u6570\u5b57\u8fb9\uff09')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u5382\u94ed\u76f4\u89d2\u8fb9\u516d\u65b9\u8fde\u65b0\u5168\uff08\u90e8\u5206\u6570\u5b57\u8fb9\uff09(\u65e0)'), ('href', '/jiteyoupiao/1961828.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+data : 厂铭直角边六方连
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : （部分数字边）
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-30 19:58
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u65e0')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥24,300.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1961828'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:229px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:136px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/2022004.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w12/105124001A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/2022004.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-27 22:07
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,240.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '2022004'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:309px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:216px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/2018142.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w11/105038017A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e2d\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e2d\u4e0a\u54c1)'), ('href', '/jiteyoupiao/2018142.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-25 19:19
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e2d\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,240.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '2018142'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:279px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:186px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/2014028.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w11/104868002A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/2014028.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-24 18:40
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥4,590.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '2014028'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:223px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:130px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/2014778.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w11/105483018A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/2014778.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-21 19:20
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥4,482.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '2014778'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:221px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:128px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1992134.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w10/103508014A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1992134.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-10 21:22
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥5,508.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1992134'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:281px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:188px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1988173.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w09/103387014A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1988173.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : （部分带边）
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-09 19:09
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥6,264.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1988173'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:221px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:128px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1990961.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w09/103584005A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e2d\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e2d\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1990961.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-05 20:04
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e2d\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,402.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1990961'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:222px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:129px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1976395.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w06/102608139A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1976395.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 03-03 21:17
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥4,374.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1976395'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:310px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:217px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1987972.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w08/103333006A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u5168\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u5168\u54c1)'), ('href', '/jiteyoupiao/1987972.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-28 20:25
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u5168\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥14,904.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1987972'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:222px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:129px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1976393.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w06/102608137A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u65e0)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u65e0)'), ('href', '/jiteyoupiao/1976393.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-25 22:40
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u65e0')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,402.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1976393'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:247px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:154px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1777424.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2012/w38/71208014A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09(\u65e0)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u8fb9\uff09(\u65e0)'), ('href', '/jiteyoupiao/1777424.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : （部分带边）
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-25 08:07
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u65e0')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥6,264.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1777424'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:223px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:130px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1981391.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w08/102927001A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1981391.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-23 22:41
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥7,020.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1981391'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:222px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:129px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1976394.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w06/102608138A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1976394.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-20 21:57
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,456.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1976394'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:222px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:129px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1976392.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w06/102608136A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1976392.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-20 21:57
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥3,186.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1976392'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:225px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:132px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1970395.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w05/101748147A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1970395.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-14 22:10
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥4,536.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1970395'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:223px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:130px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1966966.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w05/102089016A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u4e0a\u54c1)'), ('href', '/jiteyoupiao/1966966.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 02-06 19:07
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u4e0a\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥4,806.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1966966'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:313px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:220px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1955290.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w03/101557001A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u6570\u5b57\u3001\u8fb9\uff09(\u5168\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u6570\u5b57\u3001\u8fb9\uff09')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168\uff08\u90e8\u5206\u5e26\u6570\u5b57\u3001\u8fb9\uff09(\u5168\u54c1)'), ('href', '/jiteyoupiao/1955290.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : （部分带数字、边）
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 01-31 20:33
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u5168\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥17,280.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1955290'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+			
+tag  : div
+attrs: [('class', 'pic_hshow_con'), ('style', 'height:363px;')]
+data : 
+				 
+tag  : div
+attrs: [('class', 'pic_hshow_item mark')]
+data : 
+					
+tag  : div
+attrs: [('style', 'width:166px;height:270px;')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('href', '/jiteyoupiao/1940077.shtml')]
+data : 
+							
+tag  : img
+attrs: [('src', 'http://images.zhaoonline.com/images/2013/w03/100700005A_S1.jpg'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u5168\u54c1)'), ('alt', u'\u727944\u83ca\u82b1\u65b0\u5168')]
+data : 
+						
+data : 
+					
+data : 
+					
+tag  : div
+attrs: [('class', 'pic_hshow_info mt10'), ('style', 'height:68px;')]
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong w160 iblock')]
+data : 
+						
+tag  : a
+attrs: [('target', '_blank'), ('title', u'\u727944\u83ca\u82b1\u65b0\u5168(\u5168\u54c1)'), ('href', '/jiteyoupiao/1940077.shtml')]
+data : 
+							
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 特44
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 菊花
+tag  : font
+attrs: [('color', '#BB0000')]
+data : 新全
+data : 
+						
+data : 
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+tag  : span
+attrs: [('class', 'iblock f_L')]
+data : 01-31 20:03
+tag  : span
+attrs: [('class', 'f_R iblock'), ('style', 'width:4em; overflow:hidden;'), ('title', u'\u5168\u54c1')]
+data :   
+					 
+data : 
+					 
+tag  : p
+attrs: [('class', 'toolong')]
+data : 
+					 	
+tag  : span
+attrs: [('class', 'iblock f_L bold')]
+data : 
+	                			￥9,288.00
+	                			
+	                			
+	                			
+	                			
+	                		
+data : 
+	                	
+tag  : span
+attrs: [('class', 'iblock f_R')]
+data : 
+	                		
+tag  : a
+attrs: [('rel', '1940077'), ('class', 'seegray'), ('title', '\xe5\x85\xb3\xe6\xb3\xa8')]
+data : 
+                		
+data : 
+                		
+data : 
+                		
+tag  : div
+attrs: [('class', 'clear_b'), ('style', 'height:1px')]
+data : 
+                		
+data : 
+                	
+data : 
+			
+data : 
+		
+	
+data : 
+	 
+		
+tag  : div
+attrs: [('class', 'clear')]
+data : 
+			
+				
+tag  : ul
+attrs: [('class', 'page_navi mt20 mb20'), ('id', 'page_div')]
+data : 
+			          
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/search/\xe7\x89\xb944\xe8\x8f\x8a\xe8\x8a\xb1\xe6\x96\xb0\xe5\x85\xa8-8-3-trade-N-N-00-N-0-N-2-1.htm')]
+data : 1
+data : 
+			          
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/search/\xe7\x89\xb944\xe8\x8f\x8a\xe8\x8a\xb1\xe6\x96\xb0\xe5\x85\xa8-8-3-trade-N-N-00-N-0-N-2-1.htm')]
+data : 
+			          
+tag  : li
+attrs: [('id', 'current_page')]
+data : 
+			          
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/search/\xe7\x89\xb944\xe8\x8f\x8a\xe8\x8a\xb1\xe6\x96\xb0\xe5\x85\xa8-8-3-trade-N-N-00-N-0-N-2-3.htm'), ('id', 'nextPage')]
+data : 
+			          
+tag  : li
+attrs: []
+tag  : a
+attrs: [('href', '/search/\xe7\x89\xb944\xe8\x8f\x8a\xe8\x8a\xb1\xe6\x96\xb0\xe5\x85\xa8-8-3-trade-N-N-00-N-0-N-2-47.htm')]
+data : 47
+data : 
+		       
+data : 
+		   
+		   
+		   
+		
+		
+
+data : 
+
+data : 
+
+data : 
+
+tag  : input
+attrs: [('type', 'hidden'), ('name', 'q.totalPage'), ('value', '47'), ('id', 'totalPage')]
+data : 
+
+data : 
+
+data : 
+
+data : 
+
+tag  : form
+attrs: [('method', 'POST'), ('id', 'pageForm')]
+data : 
+
+tag  : input
+attrs: [('name', 'q.categoryHtml'), ('type', 'hidden'), ('id', 'categoryHtml')]
+data : 
+
+tag  : input
+attrs: [('name', 'q.characterHtml'), ('type', 'hidden'), ('id', 'characterHtml')]
+data : 
+
+data : 
+
+data : 
+
+tag  : div
+attrs: [('class', 'clear')]
+data : 
+
+
+data : 
+
+tag  : div
+attrs: [('class', 'clear')]
+data : 
+
+data : 
+
+data : 
+
+
+data : 
+
+data : 
+
+tag  : div
+attrs: [('id', 'footer'), ('class', 'pt20')]
+data : 
+    
+tag  : div
+attrs: [('class', 'copyright')]
+data : 
+    	
+tag  : span
+attrs: []
+data : COPYRIGHT © 1999-2012 
+data : 
+        
+tag  : span
+attrs: []
+tag  : a
+attrs: [('href', '/')]
+data : ZHAOONLINE.COM
+data : 
+        
+tag  : span
+attrs: []
+data : CORPORATION. ALL RIGHTS RESERVED.
+data : 
+    
+data : 
+
+data : 
+
+data : 
+
+data : 
+
+data : 
+
