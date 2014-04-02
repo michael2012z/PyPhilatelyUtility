@@ -271,6 +271,7 @@ class DataHandler():
                 break
             #html = self.downloader.download(url)
             historyItemListParser.parse(html)
+            self.saveToListFile(searchItem.name+"_"+str(page), html)
             page += 1
         historyItemList = historyItemListParser.getHistoryItemList()
         historyItemListParser.clean()
@@ -328,6 +329,12 @@ class DataHandler():
 
     def saveToTmpFile(self, historyItem, html):
         fileName = 'tmp/' + historyItem.id + ".shtml"
+        f= open(fileName, 'w')
+        f.write(html)
+        f.close()
+
+    def saveToListFile(self, name, html):
+        fileName = 'list/' + name + ".html"
         f= open(fileName, 'w')
         f.write(html)
         f.close()
