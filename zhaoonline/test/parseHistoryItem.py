@@ -45,9 +45,6 @@ class HistoryItemParser(HTMLParser):
         self.feed(html)
 
     def handle_starttag(self,tag,attrs):
-#        print "++++ handle_starttag: "
-#        print tag
-#        print attrs
         if tag == "div" and len(attrs) > 0 and attrs[0] == ('class', 'Id'):
             self.parsingID = True
         elif tag == "span" and len(attrs) > 0 and attrs[0] == ('class', 'name'):
@@ -67,8 +64,6 @@ class HistoryItemParser(HTMLParser):
             self.parsingAuction = True
 
     def handle_data(self, data):
-#        print "++++ handle_data: "
-#        print str(data)
         if self.parsingID == True:
             self.historyItem.id = data
             self.parsingID = False
@@ -89,12 +84,13 @@ class HistoryItemParser(HTMLParser):
             self.parsingPrice = False
         elif self.parsingAuction == True:
             if str(data).find('var auction') >= 0:
-                print str(data)
                 self.parseAuctionData(data)
             self.parsingAuction = False
 
 
     def findBlock(self, text):
+        print "findBlock(): text = "
+        print text
         remainingBrackets = []
         blockText = ""
         for c in text:
@@ -119,9 +115,24 @@ class HistoryItemParser(HTMLParser):
                 else:
                     print "brackets {} mismatch"
                     return ""
+        print "findBlock(): return = "
         print blockText[1:len(blockText)-1]
         return blockText[1:len(blockText)-1]
             
+
+    def buildList(self, text):
+        li = []
+        i = 0
+        while(i < len(text)):
+            c = text[i]
+            if c == "{":
+                blockText = self.findBlock(text[i:])
+                blockDic = self.buildDic(blockText)
+                li.append(blockDic)
+                i += len(blockText) + 1
+            i += 1
+        return li
+                
 
     def buildDic(self, text):
         dic = {}
@@ -130,11 +141,22 @@ class HistoryItemParser(HTMLParser):
         key = ""
         value = ""
         i = 0
+        quoting = False
         while(i < len(text)):
             c = text[i]
             print i
             print c
-            if c == ":":
+            if c == '"':
+                if quoting == False:
+                    quoting = True
+                else:
+                    quoting = False
+            elif quoting == True:
+                if findingValue == True:
+                    value += c
+                else:
+                    key += c
+            elif c == ":":
                 findingKey = False
                 findingValue = True
             elif c == ",":
@@ -145,7 +167,7 @@ class HistoryItemParser(HTMLParser):
                 dic.update({key:value})
                 key = ""
                 value = ""
-            elif c == "{" or c == "[":
+            elif c == "{":
                 blockText = self.findBlock(text[i:])
                 blockDic = self.buildDic(blockText)
                 if findingValue == True:
@@ -153,6 +175,14 @@ class HistoryItemParser(HTMLParser):
                 else:
                     key = blockDic
                 i += len(blockText) + 1
+            elif c == "[":
+                listText = self.findBlock(text[i:])
+                blockList = self.buildList(listText)
+                if findingValue == True:
+                    value = blockList
+                else:
+                    key = blockList
+                i += len(listText) + 1
             else:
                 if findingValue == True:
                     value += c
@@ -168,7 +198,7 @@ class HistoryItemParser(HTMLParser):
         auctionText = auctionText[str(auctionText).find('{'):]
         pureAuctionText = self.findBlock(auctionText)
         dic = self.buildDic(pureAuctionText)
-        print dic
+        print dic.get("pictures")[0].get("src")
         return
 
     def getHistoryItem(self):
