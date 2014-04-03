@@ -88,8 +88,8 @@ class HistoryItemParser(HTMLParser):
             self.parsingAuction = False
 
 
-    def findBlock(self, text):
-        print "findBlock(): text = "
+    def findAuctionBlock(self, text):
+        print "findAuctionBlock(): text = "
         print text
         remainingBrackets = []
         blockText = ""
@@ -115,26 +115,26 @@ class HistoryItemParser(HTMLParser):
                 else:
                     print "brackets {} mismatch"
                     return ""
-        print "findBlock(): return = "
+        print "findAuctionBlock(): return = "
         print blockText[1:len(blockText)-1]
         return blockText[1:len(blockText)-1]
             
 
-    def buildList(self, text):
+    def buildAuctionList(self, text):
         li = []
         i = 0
         while(i < len(text)):
             c = text[i]
             if c == "{":
-                blockText = self.findBlock(text[i:])
-                blockDic = self.buildDic(blockText)
+                blockText = self.findAuctionBlock(text[i:])
+                blockDic = self.buildAuctionDic(blockText)
                 li.append(blockDic)
                 i += len(blockText) + 1
             i += 1
         return li
                 
 
-    def buildDic(self, text):
+    def buildAuctionDic(self, text):
         dic = {}
         findingKey = True
         findingValue = False
@@ -168,16 +168,16 @@ class HistoryItemParser(HTMLParser):
                 key = ""
                 value = ""
             elif c == "{":
-                blockText = self.findBlock(text[i:])
-                blockDic = self.buildDic(blockText)
+                blockText = self.findAuctionBlock(text[i:])
+                blockDic = self.buildAuctionDic(blockText)
                 if findingValue == True:
                     value = blockDic
                 else:
                     key = blockDic
                 i += len(blockText) + 1
             elif c == "[":
-                listText = self.findBlock(text[i:])
-                blockList = self.buildList(listText)
+                listText = self.findAuctionBlock(text[i:])
+                blockList = self.buildAuctionList(listText)
                 if findingValue == True:
                     value = blockList
                 else:
@@ -196,8 +196,8 @@ class HistoryItemParser(HTMLParser):
         auctionText = auction
         auctionText = auctionText[str(auctionText).find('var auction'):]
         auctionText = auctionText[str(auctionText).find('{'):]
-        pureAuctionText = self.findBlock(auctionText)
-        dic = self.buildDic(pureAuctionText)
+        pureAuctionText = self.findAuctionBlock(auctionText)
+        dic = self.buildAuctionDic(pureAuctionText)
         print dic.get("pictures")[0].get("src")
         return
 

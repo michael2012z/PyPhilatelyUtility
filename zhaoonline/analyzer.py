@@ -148,6 +148,7 @@ class HistoryItemParser(HTMLParser):
     parsingComments = False
     parsingQuality = False
     parsingPrice = False
+    parsingAuction = False
 
     def __init__(self):
         HTMLParser.__init__(self)
@@ -172,6 +173,8 @@ class HistoryItemParser(HTMLParser):
             self.parsingPrice = True
         elif tag == "div" and len(attrs) > 0 and attrs[0] == ('class', 'description'):
             self.parsingComments = True
+        elif tag == "script" and len(attrs) > 0 and attrs[0] == ('type', 'text/javascript'):
+            self.parsingAuction = True
 
     def handle_data(self, data):
         if self.parsingID == True:
@@ -192,6 +195,123 @@ class HistoryItemParser(HTMLParser):
         elif self.parsingPrice == True:
             self.historyItem.price = data
             self.parsingPrice = False
+        elif self.parsingAuction == True:
+            if str(data).find('var auction') >= 0:
+                (self.historyItem.auctionText, self.historyItem.auctionData) = self.parseAuctionData(data)
+            self.parsingAuction = False
+
+
+    def findAuctionBlock(self, text):
+        print "findAuctionBlock(): text = "
+        print text
+        remainingBrackets = []
+        blockText = ""
+        for c in text:
+            blockText += c
+            if c == "{":
+                remainingBrackets.append("}")
+            elif c == "[":
+                remainingBrackets.append("]")
+            elif c == "]":
+                if remainingBrackets[len(remainingBrackets)-1] == c:
+                    del remainingBrackets[len(remainingBrackets)-1]
+                    if len(remainingBrackets) == 0:
+                        break
+                else:
+                    print "bracket [] mismatch"
+                    return ""
+            elif c == "}":
+                if remainingBrackets[len(remainingBrackets)-1] == c:
+                    del remainingBrackets[len(remainingBrackets)-1]
+                    if len(remainingBrackets) == 0:
+                        break
+                else:
+                    print "brackets {} mismatch"
+                    return ""
+        print "findAuctionBlock(): return = "
+        print blockText[1:len(blockText)-1]
+        return blockText[1:len(blockText)-1]
+            
+
+    def buildAuctionList(self, text):
+        li = []
+        i = 0
+        while(i < len(text)):
+            c = text[i]
+            if c == "{":
+                blockText = self.findAuctionBlock(text[i:])
+                blockDic = self.buildAuctionDic(blockText)
+                li.append(blockDic)
+                i += len(blockText) + 1
+            i += 1
+        return li
+                
+
+    def buildAuctionDic(self, text):
+        dic = {}
+        findingKey = True
+        findingValue = False
+        key = ""
+        value = ""
+        i = 0
+        quoting = False
+        while(i < len(text)):
+            c = text[i]
+            print i
+            print c
+            if c == '"':
+                if quoting == False:
+                    quoting = True
+                else:
+                    quoting = False
+            elif quoting == True:
+                if findingValue == True:
+                    value += c
+                else:
+                    key += c
+            elif c == ":":
+                findingKey = False
+                findingValue = True
+            elif c == ",":
+                findingKey = True
+                findingValue = False
+                print "key: \n" + str(key)
+                print "value: \n" + str(value)
+                dic.update({key:value})
+                key = ""
+                value = ""
+            elif c == "{":
+                blockText = self.findAuctionBlock(text[i:])
+                blockDic = self.buildAuctionDic(blockText)
+                if findingValue == True:
+                    value = blockDic
+                else:
+                    key = blockDic
+                i += len(blockText) + 1
+            elif c == "[":
+                listText = self.findAuctionBlock(text[i:])
+                blockList = self.buildAuctionList(listText)
+                if findingValue == True:
+                    value = blockList
+                else:
+                    key = blockList
+                i += len(listText) + 1
+            else:
+                if findingValue == True:
+                    value += c
+                else:
+                    key += c
+            i += 1
+        return dic
+
+    def parseAuctionData(self, auction):
+        auctionText = auction
+        auctionText = auctionText[str(auctionText).find('var auction'):]
+        auctionText = auctionText[str(auctionText).find('{'):]
+        pureAuctionText = self.findAuctionBlock(auctionText)
+        dic = self.buildAuctionDic(pureAuctionText)
+        print dic.get("pictures")[0].get("src")
+        return (pureAuctionText, dic)
 
     def getHistoryItem(self):
         return self.historyItem
@@ -218,6 +338,8 @@ class HistoryItem():
     comments = ""
     date = 0
     price = 0
+    auctionText = ""
+    auctionData = None
 
 class SearchItem():
     name = ""
@@ -297,6 +419,8 @@ class DataHandler():
             historyItem.quality = tmpItem.quality
             historyItem.date = tmpItem.date
             historyItem.price = tmpItem.price
+            historyItem.auctionText = tmpItem.auctionText
+            historyItem.auctionData = tmpItem.auctionData
             # save the html content to tmp directory
             self.saveToTmpFile(historyItem, html)
         return
@@ -383,6 +507,9 @@ class SearchResultXmlLoader():
                 print historyItem.date
                 historyItem.price = item.getElementsByTagName("Price")[0].childNodes[0].nodeValue#.encode("utf-8")
                 print historyItem.price
+                historyItem.auctionText = item.getElementsByTagName("Auction")[0].childNodes[0].nodeValue#.encode("utf-8")
+                print historyItem.auctionText
+                
                 searchItem.historyItems.append(historyItem)
             except Exception, e:
                 print "XXXXXXXXXXXXXX"
@@ -470,6 +597,11 @@ class SearchResultXmlGenerator():
 
         tag = self.dom.createElement('Price')
         value = self.dom.createTextNode(str(historyItem.price))
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Auction')
+        value = self.dom.createTextNode(str(historyItem.auctionText))
         tag.appendChild(value)
         item.appendChild(tag)
 
