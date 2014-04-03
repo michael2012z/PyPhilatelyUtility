@@ -99,6 +99,7 @@ class HistoryItemListParser(HTMLParser):
     hasNextPage = False
     currentPage = -1
     totalPage = 0
+    itemsFoundInCurrentPage = 1
 
     def __init__(self):
         HTMLParser.__init__(self)
@@ -116,6 +117,7 @@ class HistoryItemListParser(HTMLParser):
         self.totalPage = 0
     
     def parse(self, html):
+        self.itemsFoundInCurrentPage = 0
         self.feed(html)
 
     def handle_starttag(self,tag,attrs):
@@ -123,6 +125,7 @@ class HistoryItemListParser(HTMLParser):
             item = HistoryItem()
             item.ref = attrs[2][1]
             self.historyItems.append(item)
+            self.itemsFoundInCurrentPage += 1 
         elif tag == "div" and len(attrs) == 2 and attrs[1] == ('id', 'center_list_id'):
             self.inCenterList = True
         elif tag == 'input' and len(attrs) == 4 and attrs[3] == ('id', 'totalPage'):
@@ -131,7 +134,7 @@ class HistoryItemListParser(HTMLParser):
             self.currentPage = int(attrs[2][1])
 
     def hasNextPage(self):
-        return self.currentPage < self.totalPage
+        return self.itemsFoundInCurrentPage > 0
 
     def getHistoryItemList(self):
         return self.historyItems
