@@ -88,15 +88,18 @@ class HtmlDownloader():
     def downLoad(self, url):
         print "downloading file: " + url
         request = urllib2.Request(url, self.login_data, self.headers)
-        response = urllib2.urlopen(request)  
-        html = response.read()
-        return html
+        try:
+            response = urllib2.urlopen(request)  
+            downloaded = response.read()
+        except Exception, e:
+            downloaded = None
+        return downloaded
+
 
 class HistoryItemListParser(HTMLParser):
     historyItems = [] #HistoryItem[]
     html = None
     inCenterList = False
-    hasNextPage = False
     currentPage = -1
     totalPage = 0
     itemsFoundInCurrentPage = 1
@@ -107,7 +110,7 @@ class HistoryItemListParser(HTMLParser):
         self.html = None
         self.inCenterList = False
         self.currentPage = -1
-        self.totalPage = 0
+        self.totalPage = 1
 
     def clean(self):
         self.historyItems = []
@@ -117,8 +120,12 @@ class HistoryItemListParser(HTMLParser):
         self.totalPage = 0
     
     def parse(self, html):
-        self.itemsFoundInCurrentPage = 0
-        self.feed(html)
+        try:
+            self.itemsFoundInCurrentPage = 0
+            self.feed(html)
+        except Exception, e:
+            print e
+
 
     def handle_starttag(self,tag,attrs):
         if self.inCenterList == True and tag == "a" and len(attrs) == 3 and attrs[2][0] == 'href':
@@ -133,8 +140,8 @@ class HistoryItemListParser(HTMLParser):
         elif tag == 'input' and len(attrs) == 4 and attrs[3] == ('id', 'currentPage'):
             self.currentPage = int(attrs[2][1])
 
-    def hasNextPage(self):
-        return self.itemsFoundInCurrentPage > 0
+    def hasNextPage(self, page):
+        return page <= self.totalPage
 
     def getHistoryItemList(self):
         return self.historyItems
@@ -197,13 +204,13 @@ class HistoryItemParser(HTMLParser):
             self.parsingPrice = False
         elif self.parsingAuction == True:
             if str(data).find('var auction') >= 0:
-                (self.historyItem.auctionText, self.historyItem.auctionData) = self.parseAuctionData(data)
+                (self.historyItem.auctionText, self.historyItem.auctionData) = self.parseRawAuctionData(data)
             self.parsingAuction = False
 
 
     def findAuctionBlock(self, text):
-        print "findAuctionBlock(): text = "
-        print text
+#        print "findAuctionBlock(): text = "
+#        print text
         remainingBrackets = []
         blockText = ""
         for c in text:
@@ -228,8 +235,8 @@ class HistoryItemParser(HTMLParser):
                 else:
                     print "brackets {} mismatch"
                     return ""
-        print "findAuctionBlock(): return = "
-        print blockText[1:len(blockText)-1]
+#        print "findAuctionBlock(): return = "
+#        print blockText[1:len(blockText)-1]
         return blockText[1:len(blockText)-1]
             
 
@@ -257,8 +264,6 @@ class HistoryItemParser(HTMLParser):
         quoting = False
         while(i < len(text)):
             c = text[i]
-            print i
-            print c
             if c == '"':
                 if quoting == False:
                     quoting = True
@@ -275,8 +280,8 @@ class HistoryItemParser(HTMLParser):
             elif c == ",":
                 findingKey = True
                 findingValue = False
-                print "key: \n" + str(key)
-                print "value: \n" + str(value)
+#                print "key: \n" + str(key)
+#                print "value: \n" + str(value)
                 dic.update({key:value})
                 key = ""
                 value = ""
@@ -304,25 +309,31 @@ class HistoryItemParser(HTMLParser):
             i += 1
         return dic
 
-    def parseAuctionData(self, auction):
+    def parseRawAuctionData(self, auction):
         auctionText = auction
         auctionText = auctionText[str(auctionText).find('var auction'):]
         auctionText = auctionText[str(auctionText).find('{'):]
         pureAuctionText = self.findAuctionBlock(auctionText)
         dic = self.buildAuctionDic(pureAuctionText)
-        print dic.get("pictures")[0].get("src")
         return (pureAuctionText, dic)
+
+    def parsePureAuctionData(self, pureAuctionText):
+        dic = self.buildAuctionDic(pureAuctionText)
+        return (pureAuctionText, dic)
+
 
     def getHistoryItem(self):
         return self.historyItem
 
 
 categoryDic = {
-    '散票'    : 178, 
+    '清代邮票' : 140,
+    '民国邮票' : 141,
     '纪特邮票' : 146,
     '文革邮票' : 171,
     '编号邮票' : 172,
-    'JT邮票'  : 173,
+    'JT邮票'   : 173,
+    '散票'     : 178, 
 }
 
 qualityDic = {
@@ -344,6 +355,7 @@ class HistoryItem():
 class SearchItem():
     name = ""
     category = ""
+    quality = ""
     historyItems = [] #HistoryItem[]
 
 class SearchData():
@@ -360,13 +372,17 @@ class DataHandler():
     def isOffLine(self):
         return self.downloader.isOffLine()
 
-    def addSearchItem(self, alias, name, category):
+    def download(self, url):
+        return self.downloader.downLoad(url)
+
+    def addSearchItem(self, alias, name, category, quality):
         newItem = SearchItem()
         newItem.alias = alias
         newItem.name = name
         newItem.category = category
+        newItem.quality = quality
         for item in self.searchData.searchItems:
-            if cmp (newItem.alias, item.alias) == 0 or (cmp(newItem.name, item.name) == 0 and cmp(newItem.category, item.category)):
+            if cmp (newItem.alias, item.alias) == 0 or (cmp(newItem.name, item.name) == 0 and cmp(newItem.category, item.category) and cmp(newItem.category, item.category)):
                 return item
         self.searchData.searchItems.append(newItem)
         return newItem
@@ -376,7 +392,9 @@ class DataHandler():
         url += urllib.pathname2url(searchItem.name)
         url += "-8-3-trade-"
         url += urllib.pathname2url(str(categoryDic[searchItem.category]))
-        url += "-2-00-N-0-N-1-"
+        url += "-"
+        url += urllib.pathname2url(str(qualityDic[searchItem.quality]))
+        url += "-00-N-0-N-1-"
         url += str(page)
         url += ".htm"
         return  url
@@ -389,7 +407,7 @@ class DataHandler():
     def updateSearchItem(self, searchItem):
         page = 1
         historyItemListParser = HistoryItemListParser()
-        while historyItemListParser.hasNextPage():
+        while historyItemListParser.hasNextPage(page):
             url = self.getSearchItemURL(searchItem, page)
             html = self.downloader.getHtml(url)
             if html == None:
@@ -471,6 +489,7 @@ class DataHandler():
         print "Dumping SearchItem: " + searchItem.name
         print "  alias: " + searchItem.alias
         print "  category: " + searchItem.category
+        print "  quality: " + searchItem.quality
         for historyItem in searchItem.historyItems:
             print "    name =     " + historyItem.name
             print "    comments = " + historyItem.comments
@@ -488,6 +507,7 @@ class SearchResultXmlLoader():
         searchItem.alias = searchResult.getElementsByTagName("Alias")[0].childNodes[0].nodeValue#.encode("utf-8")
         searchItem.name = searchResult.getElementsByTagName("Keyword")[0].childNodes[0].nodeValue#.encode("utf-8")
         searchItem.category = searchResult.getElementsByTagName("Category")[0].childNodes[0].nodeValue#.encode("utf-8")
+        searchItem.quality = searchResult.getElementsByTagName("Quality")[0].childNodes[0].nodeValue#.encode("utf-8")
         items = searchResult.getElementsByTagName("ItemList")[0].childNodes
         for item in items:
             print item
@@ -509,7 +529,9 @@ class SearchResultXmlLoader():
                 print historyItem.price
                 historyItem.auctionText = item.getElementsByTagName("Auction")[0].childNodes[0].nodeValue#.encode("utf-8")
                 print historyItem.auctionText
-                
+                #historyItemParser = HistoryItemParser()
+                #(xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+
                 searchItem.historyItems.append(historyItem)
             except Exception, e:
                 print "XXXXXXXXXXXXXX"
@@ -562,6 +584,12 @@ class SearchResultXmlGenerator():
         category.appendChild(categoryValue)
         self.root.appendChild(category)
 
+    def setQuality(self, qualityText):
+        quality = self.dom.createElement('Quality')
+        qualityValue = self.dom.createTextNode(qualityText)
+        quality.appendChild(qualityValue)
+        self.root.appendChild(quality)
+
     def addHistoryItem(self, historyItem):
         item = self.dom.createElement('Item')
 
@@ -611,7 +639,7 @@ class SearchResultXmlGenerator():
         self.itemList.appendChild(item)
 
     def writeToFile(self):
-        f= open("data/" + self.searchItem.name + "_" + self.searchItem.category + ".xml", 'w')
+        f= open("data/" + self.searchItem.name + "_" + self.searchItem.category + "_" + self.searchItem.quality + ".xml", 'w')
         self.dom.writexml(f, addindent='  ', newl='\n',encoding='utf-8')
         f.close() 
 
@@ -619,6 +647,7 @@ class SearchResultXmlGenerator():
         self.setAlias(self.searchItem.alias)
         self.setKeyword(self.searchItem.name)
         self.setCategory(self.searchItem.category)
+        self.setQuality(self.searchItem.quality)
 #.decode("utf-8").encode("GBK"))
 #.decode("GBK").encode("utf-8"))
         for item in self.searchItem.historyItems:
@@ -699,7 +728,7 @@ if __name__ == '__main__':
     quitCommand = False
     while quitCommand == False:
         command = raw_input("[z analyzer] ")
-        parameters = command.split(' ', 3)
+        parameters = command.split(' ', 4)
         if parameters[0] == "q" or parameters[0] == "quit" or parameters[0] == "exit":
             quitCommand = True
         elif parameters[0] == "list" or parameters[0] == "l":
@@ -712,14 +741,17 @@ if __name__ == '__main__':
                 alias = parameters[1]
                 name = parameters[2]
                 category = parameters[3]
-                if cmp(category, '散票') != 0 and cmp(category, '纪特邮票') != 0 and cmp(category, '文革邮票') != 0 and cmp(category, '编号邮票') != 0 and cmp(category, 'JT邮票') != 0:
-                    print "ERROR: unknown category type"
+                quality = parameters[4]
+                if cmp(category, '清代邮票') != 0 and cmp(category, '民国邮票') != 0 and cmp(category, '散票') != 0 and cmp(category, '纪特邮票') != 0 and cmp(category, '文革邮票') != 0 and cmp(category, '编号邮票') != 0 and cmp(category, 'JT邮票') != 0:
+                    print "ERROR: unknown category type: " + category
+                elif cmp(quality, '全品') != 0 and cmp(quality, '上品') != 0:
+                    print "ERROR: unknown quality type: " + quality
                 else:
-                    newSearchItem = dataHandler.addSearchItem(alias, name, category)
+                    newSearchItem = dataHandler.addSearchItem(alias, name, category, quality)
                 return
 
-            # format: add <alias> <name> <category>
-            if len(parameters) == 4:
+            # format: add <alias> <name> <category> <quality>
+            if len(parameters) == 5:
                 add(parameters)
             elif len(parameters) == 2 and parameters[1] == "all":
                 f = open("addAll.txt")
@@ -730,8 +762,9 @@ if __name__ == '__main__':
                         break
                     if l[0] == '#':
                         continue
-                    param = l.split(' ', 3)
-                    if len(param) == 4:
+                    param = l.split(' ', 4)
+                    print param
+                    if len(param) == 5:
                         add(param)
                 f.close()
             else:
@@ -769,6 +802,44 @@ if __name__ == '__main__':
                     plt.show()
             else:
                 print "ERROR: wrong count of parameter"
+
+        elif parameters[0] == "download":
+            # format: download <alias>
+            if len(parameters) == 2:
+                if dataHandler.isOffLine():
+                    print "ERROR: offline mode, can't update"
+                    continue
+                alias = parameters[1]
+                searchItem = dataHandler.getSearchItemByAlias(alias)
+                print searchItem
+                if searchItem == None:
+                    print "ERROR: can't find alias: " + alias
+                else:
+                    historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
+                    print historyItems
+                    for historyItem in historyItems:
+                        historyItemParser = HistoryItemParser()
+                        (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+                        print historyItem.auctionData
+                        for i in [0, 1]:
+                            try:
+                                #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
+                                keys = ["src"]
+                                for key in keys:
+                                    picURL = historyItem.auctionData.get("pictures")[i].get(key)
+                                    print picURL
+                                    if picURL <> None:
+                                        pic = dataHandler.download(picURL)
+                                        picFileName = "image/" + picURL.split("/")[-1]
+                                        picFile = open(picFileName, "wb")
+                                        picFile.write(pic)
+                                        picFile.close()
+                            except Exception, e:
+                                print e
+                                continue
+            else:
+                print "ERROR: wrong count of parameter"
+
 
         elif parameters[0] == "up" or parameters[0] == "update":
             # format: show <alias>
