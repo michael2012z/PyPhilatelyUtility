@@ -92,6 +92,7 @@ class HtmlDownloader():
             response = urllib2.urlopen(request)  
             downloaded = response.read()
         except Exception, e:
+            print e
             downloaded = None
         return downloaded
 
@@ -123,8 +124,10 @@ class HistoryItemListParser(HTMLParser):
         try:
             self.itemsFoundInCurrentPage = 0
             self.feed(html)
+            return True
         except Exception, e:
             print e
+            return False
 
 
     def handle_starttag(self,tag,attrs):
@@ -364,6 +367,7 @@ class SearchData():
 class DataHandler():
     searchData = None
     downloader = None
+    failureList = []
 
     def __init__(self, user, passwd):
         self.searchData = SearchData()
@@ -375,6 +379,12 @@ class DataHandler():
     def download(self, url):
         return self.downloader.downLoad(url)
 
+    def printLog(self):
+        print "failure records: "
+        for failure in self.failureList:
+            print "  " + failure
+        self.failureList = []
+        
     def addSearchItem(self, alias, name, category, quality):
         newItem = SearchItem()
         newItem.alias = alias
@@ -413,7 +423,8 @@ class DataHandler():
             if html == None:
                 break
             #html = self.downloader.download(url)
-            historyItemListParser.parse(html)
+            if historyItemListParser.parse(html) == False:
+                self.failureList.append(url)
             self.saveToListFile(searchItem.name+"_"+str(page), html)
             page += 1
         historyItemList = historyItemListParser.getHistoryItemList()
@@ -422,7 +433,6 @@ class DataHandler():
         # now every HistoryItem has id only
         for historyItem in searchItem.historyItems:
             url = self.getHistoryItemURL(historyItem.ref)
-            print historyItem.ref, url
             html = self.downloader.getHtml(url)
             if html == None:
                 continue
@@ -447,8 +457,8 @@ class DataHandler():
         searchResultXmlLoader = SearchResultXmlLoader()
         self.searchData = searchResultXmlLoader.loadAllXmlFiles()
         # debug
-        for searchItem in self.searchData.searchItems:
-            self.dumpSearchItem(searchItem)
+        #for searchItem in self.searchData.searchItems:
+        #    self.dumpSearchItem(searchItem)
         return
 
     def saveAllSearchItemsToXml(self):
@@ -514,27 +524,27 @@ class SearchResultXmlLoader():
             try:
                 historyItem = HistoryItem()
                 historyItem.ref = item.getElementsByTagName("Ref")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.ref
+                #print historyItem.ref
                 historyItem.id = item.getElementsByTagName("ID")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.id
+                #print historyItem.id
                 historyItem.name = item.getElementsByTagName("Name")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.name
+                #print historyItem.name
                 historyItem.quality = item.getElementsByTagName("Quality")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.quality
+                #print historyItem.quality
                 historyItem.comments = item.getElementsByTagName("Comments")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.comments
+                #print historyItem.comments
                 historyItem.date = item.getElementsByTagName("Date")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.date
+                #print historyItem.date
                 historyItem.price = item.getElementsByTagName("Price")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.price
+                #print historyItem.price
                 historyItem.auctionText = item.getElementsByTagName("Auction")[0].childNodes[0].nodeValue#.encode("utf-8")
-                print historyItem.auctionText
+                #print historyItem.auctionText
                 #historyItemParser = HistoryItemParser()
                 #(xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
 
                 searchItem.historyItems.append(historyItem)
             except Exception, e:
-                print "XXXXXXXXXXXXXX"
+                #print e
                 continue
 
         return searchItem
@@ -763,7 +773,6 @@ if __name__ == '__main__':
                     if l[0] == '#':
                         continue
                     param = l.split(' ', 4)
-                    print param
                     if len(param) == 5:
                         add(param)
                 f.close()
@@ -816,24 +825,23 @@ if __name__ == '__main__':
                     print "ERROR: can't find alias: " + alias
                 else:
                     historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
-                    print historyItems
                     for historyItem in historyItems:
                         historyItemParser = HistoryItemParser()
                         (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
-                        print historyItem.auctionData
+                        #print historyItem.auctionData
                         for i in [0, 1]:
                             try:
                                 #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
                                 keys = ["src"]
                                 for key in keys:
                                     picURL = historyItem.auctionData.get("pictures")[i].get(key)
-                                    print picURL
                                     if picURL <> None:
                                         pic = dataHandler.download(picURL)
-                                        picFileName = "image/" + picURL.split("/")[-1]
-                                        picFile = open(picFileName, "wb")
-                                        picFile.write(pic)
-                                        picFile.close()
+                                        if pic <> None:
+                                            picFileName = "image/" + picURL.split("/")[-1]
+                                            picFile = open(picFileName, "wb")
+                                            picFile.write(pic)
+                                            picFile.close()
                             except Exception, e:
                                 print e
                                 continue
@@ -855,6 +863,7 @@ if __name__ == '__main__':
                         dataHandler.updateSearchItem(searchItem)
                         # debug
                         #dataHandler.dumpSearchItem(searchItem)
+                    dataHandler.printLog()
                 else:
                     searchItem = dataHandler.getSearchItemByAlias(alias)
                     if searchItem == None:
@@ -862,6 +871,7 @@ if __name__ == '__main__':
                     else:
                         print "updating searchItem: " + searchItem.name
                         dataHandler.updateSearchItem(searchItem)
+                    dataHandler.printLog()
             else:
                 print "ERROR: wrong count of parameter"
 
