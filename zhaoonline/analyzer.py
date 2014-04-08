@@ -16,6 +16,10 @@ from datetime import *
 from decimal import Decimal
 from re import sub
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 # get history list
 # get number of pages
 # go through each page
@@ -392,7 +396,8 @@ class DataHandler():
         newItem.category = category
         newItem.quality = quality
         for item in self.searchData.searchItems:
-            if cmp (newItem.alias, item.alias) == 0 or (cmp(newItem.name, item.name) == 0 and cmp(newItem.category, item.category) and cmp(newItem.category, item.category)):
+            if cmp (newItem.alias, item.alias) == 0 or (cmp(newItem.name, item.name) == 0 and cmp(newItem.category, item.category) and cmp(newItem.quality, item.quality)):
+                print "exist"
                 return item
         self.searchData.searchItems.append(newItem)
         return newItem
@@ -832,7 +837,7 @@ if __name__ == '__main__':
                         for i in [0, 1]:
                             try:
                                 #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
-                                keys = ["src"]
+                                keys = ["src", "m_size"]
                                 for key in keys:
                                     picURL = historyItem.auctionData.get("pictures")[i].get(key)
                                     if picURL <> None:
