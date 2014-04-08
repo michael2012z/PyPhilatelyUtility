@@ -80,7 +80,7 @@ class HtmlDownloader():
         return self.offLine
 
     def getHtml(self, url):
-        print "downloading file: " + url
+        #print "downloading file: " + url
         request = urllib2.Request(url, self.login_data, self.headers)
         try:
             response = urllib2.urlopen(request)  
@@ -90,7 +90,7 @@ class HtmlDownloader():
         return html
     
     def downLoad(self, url):
-        print "downloading file: " + url
+        #print "downloading file: " + url
         request = urllib2.Request(url, self.login_data, self.headers)
         try:
             response = urllib2.urlopen(request)  
@@ -424,6 +424,7 @@ class DataHandler():
         historyItemListParser = HistoryItemListParser()
         while historyItemListParser.hasNextPage(page):
             url = self.getSearchItemURL(searchItem, page)
+            print "parsing search list: " + url
             html = self.downloader.getHtml(url)
             if html == None:
                 break
@@ -436,8 +437,10 @@ class DataHandler():
         historyItemListParser.clean()
         searchItem.historyItems = historyItemList
         # now every HistoryItem has id only
-        for historyItem in searchItem.historyItems:
+        for i in range(0, len(searchItem.historyItems)):
+            historyItem = searchItem.historyItems[i]
             url = self.getHistoryItemURL(historyItem.ref)
+            print "(" + str(i) + "/" + str(len(searchItem.historyItems))+ ") downloading page: " + url
             html = self.downloader.getHtml(url)
             if html == None:
                 continue
@@ -825,29 +828,36 @@ if __name__ == '__main__':
                     continue
                 alias = parameters[1]
                 searchItem = dataHandler.getSearchItemByAlias(alias)
-                print searchItem
                 if searchItem == None:
                     print "ERROR: can't find alias: " + alias
                 else:
                     historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
+                    downloadList = []
+                    # build download list at first
                     for historyItem in historyItems:
                         historyItemParser = HistoryItemParser()
                         (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
                         #print historyItem.auctionData
                         for i in [0, 1]:
-                            try:
-                                #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
-                                keys = ["src", "m_size"]
-                                for key in keys:
-                                    picURL = historyItem.auctionData.get("pictures")[i].get(key)
-                                    if picURL <> None:
-                                        pic = dataHandler.download(picURL)
-                                        if pic <> None:
-                                            picFileName = "image/" + picURL.split("/")[-1]
-                                            picFile = open(picFileName, "wb")
-                                            picFile.write(pic)
-                                            picFile.close()
-                            except Exception, e:
+                            #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
+                            keys = ["src", "m_size"]
+                            for key in keys:
+                                picURL = historyItem.auctionData.get("pictures")[i].get(key)
+                                if picURL <> None:
+                                    picFileName = "image/" + picURL.split("/")[-1]
+                                    downloadList.append([picURL, picFileName])
+                    # then download image one by one
+                    for i in range(0, len(downloadList)):
+                        picURL = downloadList[i][0]
+                        picFileName = downloadList[i][1]
+                        try:
+                            print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
+                            pic = dataHandler.download(picURL)
+                            if pic <> None:
+                                picFile = open(picFileName, "wb")
+                                picFile.write(pic)
+                                picFile.close()
+                        except Exception, e:
                                 print e
                                 continue
             else:
