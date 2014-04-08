@@ -838,11 +838,11 @@ if __name__ == '__main__':
                         historyItemParser = HistoryItemParser()
                         (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
                         #print historyItem.auctionData
-                        for i in [0, 1]:
+                        for pictureData in historyItem.auctionData.get("pictures"):
                             #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
                             keys = ["src", "m_size"]
                             for key in keys:
-                                picURL = historyItem.auctionData.get("pictures")[i].get(key)
+                                picURL = pictureData.get(key)
                                 if picURL <> None:
                                     picFileName = "image/" + picURL.split("/")[-1]
                                     downloadList.append([picURL, picFileName])
