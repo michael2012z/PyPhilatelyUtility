@@ -827,41 +827,52 @@ if __name__ == '__main__':
                     print "ERROR: offline mode, can't update"
                     continue
                 alias = parameters[1]
-                searchItem = dataHandler.getSearchItemByAlias(alias)
-                if searchItem == None:
-                    print "ERROR: can't find alias: " + alias
+                if alias == 'all':
+                    searchItems = dataHandler.getAllSearchItems()
                 else:
-                    historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
-                    downloadList = []
-                    # build download list at first
-                    for historyItem in historyItems:
-                        historyItemParser = HistoryItemParser()
-                        (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
-                        #print historyItem.auctionData
-                        for pictureData in historyItem.auctionData.get("pictures"):
-                            #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
-                            keys = ["src", "m_size"]
-                            for key in keys:
-                                picURL = pictureData.get(key)
-                                if picURL <> None:
-                                    picFileName = "image/" + picURL.split("/")[-1]
-                                    downloadList.append([picURL, picFileName])
-                    # then download image one by one
-                    for i in range(0, len(downloadList)):
-                        picURL = downloadList[i][0]
-                        picFileName = downloadList[i][1]
-                        try:
-                            print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
-                            pic = dataHandler.download(picURL)
-                            if pic <> None:
-                                picFile = open(picFileName, "wb")
-                                picFile.write(pic)
-                                picFile.close()
-                        except Exception, e:
+                    searchItems = [dataHandler.getSearchItemByAlias(alias)]
+                for searchItem in searchItems:
+                    if searchItem == None:
+                        print "ERROR: can't find alias: " + alias
+                    else:
+                        historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
+                        downloadList = []
+                        dirName = "image/" + searchItem.alias
+                        if os.path.exists(dirName) == False:
+                            os.mkdir(dirName)
+                        elif os.path.isdir(dirName) == False:
+                            print '"' + dirName + '" file exist, remove it'
+                            continue
+                            
+                        # build download list at first
+                        for historyItem in historyItems:
+                            historyItemParser = HistoryItemParser()
+                            (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+                            #print historyItem.auctionData
+                            for pictureData in historyItem.auctionData.get("pictures"):
+                                #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
+                                keys = ["src", "m_size"]
+                                for key in keys:
+                                    picURL = pictureData.get(key)
+                                    if picURL <> None:
+                                        picFileName = "image/" + searchItem.alias + "/" + picURL.split("/")[-1]
+                                        downloadList.append([picURL, picFileName])
+                        # then download image one by one
+                        for i in range(0, len(downloadList)):
+                            picURL = downloadList[i][0]
+                            picFileName = downloadList[i][1]
+                            try:
+                                print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
+                                pic = dataHandler.download(picURL)
+                                if pic <> None:
+                                    picFile = open(picFileName, "wb")
+                                    picFile.write(pic)
+                                    picFile.close()
+                            except Exception, e:
                                 print e
                                 continue
-            else:
-                print "ERROR: wrong count of parameter"
+                else:
+                    print "ERROR: wrong count of parameter"
 
 
         elif parameters[0] == "up" or parameters[0] == "update":
