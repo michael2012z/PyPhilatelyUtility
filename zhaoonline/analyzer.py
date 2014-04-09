@@ -824,7 +824,7 @@ if __name__ == '__main__':
             # format: download <alias>
             if len(parameters) == 2:
                 if dataHandler.isOffLine():
-                    print "ERROR: offline mode, can't update"
+                    print "ERROR: offline mode, can't download"
                     continue
                 alias = parameters[1]
                 if alias == 'all':
@@ -855,7 +855,7 @@ if __name__ == '__main__':
                                 for key in keys:
                                     picURL = pictureData.get(key)
                                     if picURL <> None:
-                                        picFileName = "image/" + searchItem.alias + "/" + picURL.split("/")[-1]
+                                        picFileName = "image/" + searchItem.alias + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
                                         downloadList.append([picURL, picFileName])
                         # then download image one by one
                         for i in range(0, len(downloadList)):
@@ -871,8 +871,8 @@ if __name__ == '__main__':
                             except Exception, e:
                                 print e
                                 continue
-                else:
-                    print "ERROR: wrong count of parameter"
+            else:
+                print "ERROR: wrong count of parameter"
 
 
         elif parameters[0] == "up" or parameters[0] == "update":
