@@ -6,6 +6,7 @@ add dragon_2d 蟠龙2元 清代邮票 上品
 add dragon_2d_op 蟠龙2元 民国邮票 上品
 add dragon_5d 蟠龙5元 清代邮票 上品
 add dragon_5d_op 蟠龙5元 民国邮票 上品
+add zhongli 临时中立 任意 任意
 #add s38 特38金鱼新全 纪特邮票 全品
 #add s44 特44菊花新全 纪特邮票 全品
 #add s56 特56蝴蝶新全 纪特邮票 全品

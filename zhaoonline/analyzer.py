@@ -334,18 +334,20 @@ class HistoryItemParser(HTMLParser):
 
 
 categoryDic = {
-    '清代邮票' : 140,
-    '民国邮票' : 141,
-    '纪特邮票' : 146,
-    '文革邮票' : 171,
-    '编号邮票' : 172,
-    'JT邮票'   : 173,
-    '散票'     : 178, 
+    '任意' : "N",
+    '清代邮票' : "140",
+    '民国邮票' : "141",
+    '纪特邮票' : "146",
+    '文革邮票' : "171",
+    '编号邮票' : "172",
+    'JT邮票'   : "173",
+    '散票'     : "178", 
 }
 
 qualityDic = {
-    '全品' : 2, 
-    '上品' : 3,
+    '任意' : "N",
+    '全品' : "2", 
+    '上品' : "3",
 }
 
 class HistoryItem():
@@ -406,9 +408,9 @@ class DataHandler():
         url = "http://www.zhaoonline.com/search/"
         url += urllib.pathname2url(searchItem.name)
         url += "-8-3-trade-"
-        url += urllib.pathname2url(str(categoryDic[searchItem.category]))
+        url += urllib.pathname2url(categoryDic[searchItem.category])
         url += "-"
-        url += urllib.pathname2url(str(qualityDic[searchItem.quality]))
+        url += urllib.pathname2url(qualityDic[searchItem.quality])
         url += "-00-N-0-N-1-"
         url += str(page)
         url += ".htm"
@@ -760,9 +762,9 @@ if __name__ == '__main__':
                 name = parameters[2]
                 category = parameters[3]
                 quality = parameters[4]
-                if cmp(category, '清代邮票') != 0 and cmp(category, '民国邮票') != 0 and cmp(category, '散票') != 0 and cmp(category, '纪特邮票') != 0 and cmp(category, '文革邮票') != 0 and cmp(category, '编号邮票') != 0 and cmp(category, 'JT邮票') != 0:
+                if cmp(category, '清代邮票') != 0 and cmp(category, '民国邮票') != 0 and cmp(category, '散票') != 0 and cmp(category, '纪特邮票') != 0 and cmp(category, '文革邮票') != 0 and cmp(category, '编号邮票') != 0 and cmp(category, 'JT邮票') != 0 and cmp(category, '任意') != 0:
                     print "ERROR: unknown category type: " + category
-                elif cmp(quality, '全品') != 0 and cmp(quality, '上品') != 0:
+                elif cmp(quality, '全品') != 0 and cmp(quality, '上品') != 0 and cmp(quality, '任意') != 0:
                     print "ERROR: unknown quality type: " + quality
                 else:
                     newSearchItem = dataHandler.addSearchItem(alias, name, category, quality)
