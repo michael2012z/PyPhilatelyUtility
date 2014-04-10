@@ -774,7 +774,7 @@ if __name__ == '__main__':
             if len(parameters) == 5:
                 add(parameters)
             elif len(parameters) == 2 and parameters[1] == "all":
-                f = open("addAll.txt")
+                f = open("queryList.txt")
                 while True:
                     l = f.readline()
                     l = l.strip()
