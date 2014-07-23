@@ -1,9 +1,40 @@
-# define searchCondition class
-# download each search result (html) and parse
-# fetch auction data
-# hold auction data as tuple, id is key
-# store auction data to file, load file in start
+# -*- coding: utf-8 -*-
+import sys
+from HTMLParser import HTMLParser
+import urllib, urllib2, cookielib
+import os, time
+import xml.dom.minidom
 
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
+import matplotlib.cbook as cbook
+import matplotlib.ticker as ticker
+
+from datetime import *  
+#import locale
+from decimal import Decimal
+from re import sub
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+# get history list
+# get number of pages
+# go through each page
+# go through each item in page
+# get the detail of each item
+# analyze information of the item, title, comments, date, price, last prizing
+
+
+# search list:
+# text format:
+# name, catalog\n
+
+# search result:
+# xml format:
+# <history><item><id><name><comments><quality><date><price>
 
 class HtmlDownloader():
     offLine = False
@@ -107,6 +138,7 @@ class HistoryItemListParser(HTMLParser):
         if self.inCenterList == True and tag == "a" and len(attrs) == 3 and attrs[2][0] == 'href':
             item = HistoryItem()
             item.ref = attrs[2][1]
+            item.name = attrs[1][1]
             self.historyItems.append(item)
             self.itemsFoundInCurrentPage += 1 
         elif tag == "div" and len(attrs) == 2 and attrs[1] == ('id', 'center_list_id'):
@@ -302,6 +334,42 @@ class HistoryItemParser(HTMLParser):
         return self.historyItem
 
 
+categoryDic = {
+    '清代邮票' : 140,
+    '民国邮票' : 141,
+    '纪特邮票' : 146,
+    '文革邮票' : 171,
+    '编号邮票' : 172,
+    'JT邮票'   : 173,
+    '散票'     : 178, 
+}
+
+class SearchCondition:
+    base = ""
+    category = []
+    includes = []
+    excludes = []
+    folder = ""
+    alias = ""
+
+    def __init__(self, base, category, includes, excludes, folder, alias):
+        self.base = base
+        self.category = category
+        self.includes = includes
+        self.excludes = excludes
+        self.folder = folder
+        self.alias = alias
+
+    def toString(self):
+        return self.base + " : " + self.alias
+
+searchConditions = [SearchCondition("蟠龙1元新", ["清代邮票", "民国邮票"], ["蟠龙1元"], ["石印"], "coiling_dragon_1d_mint", "1dm"),
+                    SearchCondition("蟠龙1元旧", ["清代邮票", "民国邮票"], ["蟠龙1元"], ["石印"], "coiling_dragon_1d_used", "1du"),
+                    SearchCondition("蟠龙2元新", ["清代邮票", "民国邮票"], ["蟠龙2元"], ["石印"], "coiling_dragon_2d_mint", "2dm"),
+                    SearchCondition("蟠龙2元旧", ["清代邮票", "民国邮票"], ["蟠龙2元"], ["石印"], "coiling_dragon_2d_used", "2du"),
+                    SearchCondition("蟠龙5元新", ["清代邮票", "民国邮票"], ["蟠龙5元"], ["石印"], "coiling_dragon_5d_mint", "5dm"),
+                    SearchCondition("蟠龙5元旧", ["清代邮票", "民国邮票"], ["蟠龙5元"], ["石印"], "coiling_dragon_5d_used", "5du"),
+                    ]
 
 class HistoryItem():
     ref = ""
@@ -315,9 +383,7 @@ class HistoryItem():
     auctionData = None
 
 class SearchItem():
-    name = ""
-    category = ""
-    quality = ""
+    condition = None
     historyItems = [] #HistoryItem[]
 
 class SearchData():
@@ -344,14 +410,11 @@ class DataHandler():
             print "  " + failure
         self.failureList = []
         
-    def addSearchItem(self, alias, name, category, quality):
+    def addSearchItem(self, condition):
         newItem = SearchItem()
-        newItem.alias = alias
-        newItem.name = name
-        newItem.category = category
-        newItem.quality = quality
+        newItem.condition = condition
         for item in self.searchData.searchItems:
-            if cmp (newItem.alias, item.alias) == 0 or (cmp(newItem.name, item.name) == 0 and cmp(newItem.category, item.category) and cmp(newItem.quality, item.quality)):
+            if cmp (newItem.condition.alias, item.condition.alias) == 0 or (cmp(newItem.condition.base, item.condition.base) == 0):
                 print "exist"
                 return item
         self.searchData.searchItems.append(newItem)
@@ -359,12 +422,19 @@ class DataHandler():
 
     def getSearchItemURL(self, searchItem, page):
         url = "http://www.zhaoonline.com/search/"
-        url += urllib.pathname2url(searchItem.name)
+        url += urllib.pathname2url(searchItem.condition.base)
         url += "-8-3-trade-"
-        url += urllib.pathname2url(str(categoryDic[searchItem.category]))
-        url += "-"
-        url += urllib.pathname2url(str(qualityDic[searchItem.quality]))
-        url += "-00-N-0-N-1-"
+        categoryStr = ""
+        for category in searchItem.condition.category:
+            if categoryStr == "":
+                categoryStr = urllib.pathname2url(str(categoryDic[category]))
+            else:
+                categoryStr += urllib.pathname2url(",")
+                categoryStr += urllib.pathname2url(str(categoryDic[category]))
+        if categoryStr == "":
+            categoryStr = urllib.pathname2url("N")
+        url += categoryStr
+        url += "-N-00-N-0-N-1-N-N-N-N-"
         url += str(page)
         url += ".htm"
         return  url
@@ -386,11 +456,25 @@ class DataHandler():
             #html = self.downloader.download(url)
             if historyItemListParser.parse(html) == False:
                 self.failureList.append(url)
-            self.saveToListFile(searchItem.name+"_"+str(page), html)
+            self.saveToListFile(searchItem.condition.base+"_"+str(page), html)
             page += 1
         historyItemList = historyItemListParser.getHistoryItemList()
-        historyItemListParser.clean()
-        searchItem.historyItems = historyItemList
+        historyItemListParser.clean()  
+        searchItem.historyItems = []
+        for historyItem in historyItemList:
+            passed = False
+            for inc in searchItem.condition.includes:
+                if historyItem.name.find(inc) < 0:
+                    passed = True
+                    break
+            for exc in searchItem.condition.excludes:
+                if historyItem.name.find(exc) >= 0:
+                    passed = True
+                    break
+            if passed == True:
+                continue
+            else:
+                searchItem.historyItems.append(historyItem)
         # now every HistoryItem has id only
         for i in range(0, len(searchItem.historyItems)):
             historyItem = searchItem.historyItems[i]
@@ -416,17 +500,47 @@ class DataHandler():
             self.saveToTmpFile(historyItem, html)
         return
 
+    def loadAllSearchItemsFromXml(self):
+        searchResultXmlLoader = SearchResultXmlLoader()
+        self.searchData = searchResultXmlLoader.loadAllXmlFiles()
+        # debug
+        #for searchItem in self.searchData.searchItems:
+        #    self.dumpSearchItem(searchItem)
+        return
+
+    def saveAllSearchItemsToXml(self):
+        for searchItem in self.searchData.searchItems:
+            self.saveSearchItemToXml(searchItem)
+        return
+
+    def saveSearchItemToXml(self, searchItem):
+        searchResultXmlGenerator = SearchResultXmlGenerator(searchItem)
+        searchResultXmlGenerator.generateXml()
+        return
+
     def getSearchItemByAlias(self, alias):
         if alias == None:
             return None
         for searchItem in self.searchData.searchItems:
-            if cmp(searchItem.alias, alias) == 0:
+            if cmp(searchItem.condition.alias, alias) == 0:
                 return searchItem
         return None
 
     def getAllSearchItems(self):
         return self.searchData.searchItems
 
+    def saveToTmpFile(self, historyItem, html):
+        fileName = 'tmp/' + historyItem.id + ".shtml"
+        f= open(fileName, 'w')
+        f.write(html)
+        f.close()
+
+    def saveToListFile(self, name, html):
+        fileName = 'list/' + name + ".html"
+        f= open(fileName, 'w')
+        f.write(html)
+        f.close()
+        
     # debug function
     def dumpSearchItem(self, searchItem):
         print "Dumping SearchItem: " + searchItem.name
@@ -438,60 +552,330 @@ class DataHandler():
             print "    comments = " + historyItem.comments
 
 
+class SearchResultXmlLoader():
 
-categoryDic = {
-    '清代邮票' : 140,
-    '民国邮票' : 141,
-    '纪特邮票' : 146,
-    '文革邮票' : 171,
-    '编号邮票' : 172,
-    'JT邮票'   : 173,
-    '散票'     : 178, 
-}
+    def __init__(self):
+        return
 
-qualityDic = {
-    '全品' : 2, 
-    '上品' : 3,
-}
+    def loadXmlFile(self, file):
+        searchItem = SearchItem()
+        doc = xml.dom.minidom.parse(file)
+        searchResult = doc.documentElement
+        searchItem.alias = searchResult.getElementsByTagName("Alias")[0].childNodes[0].nodeValue#.encode("utf-8")
+        searchItem.name = searchResult.getElementsByTagName("Keyword")[0].childNodes[0].nodeValue#.encode("utf-8")
+        searchItem.category = searchResult.getElementsByTagName("Category")[0].childNodes[0].nodeValue#.encode("utf-8")
+        searchItem.quality = searchResult.getElementsByTagName("Quality")[0].childNodes[0].nodeValue#.encode("utf-8")
+        items = searchResult.getElementsByTagName("ItemList")[0].childNodes
+        for item in items:
+            print item
+            try:
+                historyItem = HistoryItem()
+                historyItem.ref = item.getElementsByTagName("Ref")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.ref
+                historyItem.id = item.getElementsByTagName("ID")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.id
+                historyItem.name = item.getElementsByTagName("Name")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.name
+                historyItem.quality = item.getElementsByTagName("Quality")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.quality
+                historyItem.comments = item.getElementsByTagName("Comments")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.comments
+                historyItem.date = item.getElementsByTagName("Date")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.date
+                historyItem.price = item.getElementsByTagName("Price")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.price
+                historyItem.auctionText = item.getElementsByTagName("Auction")[0].childNodes[0].nodeValue#.encode("utf-8")
+                #print historyItem.auctionText
+                #historyItemParser = HistoryItemParser()
+                #(xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+
+                searchItem.historyItems.append(historyItem)
+            except Exception, e:
+                #print e
+                continue
+
+        return searchItem
+
+    def loadAllXmlFiles(self):
+        searchData = SearchData()
+        fileNames = os.listdir('data/')
+        for fileName in fileNames:
+            fileName = 'data/' + fileName
+            if os.path.isfile(fileName):
+                fileNameBase, fileNameExt = os.path.splitext(fileName)
+                if cmp(fileNameExt, '.xml') == 0:
+                    print "loading file: " + fileName
+                    searchItem = self.loadXmlFile(fileName)
+                    searchData.searchItems.append(searchItem)
+        return searchData
 
 
-class SearchCondition:
-    base = ""
-    category = ""
-    quality = ""
-    contains = []
-    excludes = []
-    folder = ""
+class SearchResultXmlGenerator():
+    dom = None
+    root = None
+    itemList = None
+    searchItem = None
 
-    def SearchCondition(self, base, category, quality, contains, excludes, folder):
-        self.base = base
-        self.category = category
-        self.quality = quality
-        self.contains = contains
-        self.excludes = excludes
-        self.folder = folder
+    def __init__(self, searchItem):
+        self.searchItem = searchItem
+        impl = xml.dom.minidom.getDOMImplementation()
+        self.dom = impl.createDocument(None, 'SearchResult', None)
+        self.root = self.dom.documentElement 
+        return
+        
+    def setAlias(self, aliasText):
+        alias = self.dom.createElement('Alias')
+        aliasValue = self.dom.createTextNode(aliasText)
+        alias.appendChild(aliasValue)
+        self.root.appendChild(alias)
 
-    def toString(self):
-        return self.folder
+    def setKeyword(self, keywordText):
+        keyword = self.dom.createElement('Keyword')
+        keywordValue = self.dom.createTextNode(keywordText)
+        keyword.appendChild(keywordValue)
+        self.root.appendChild(keyword)
 
-searchConditions = [SearchCondition("", "", "", [], [], ""),
-                    SearchCondition("", "", "", [], [], ""),
-                    SearchCondition("", "", "", [], [], ""),
-                    ]
+    def setCategory(self, categoryText):
+        category = self.dom.createElement('Category')
+        categoryValue = self.dom.createTextNode(categoryText)
+        category.appendChild(categoryValue)
+        self.root.appendChild(category)
+
+    def setQuality(self, qualityText):
+        quality = self.dom.createElement('Quality')
+        qualityValue = self.dom.createTextNode(qualityText)
+        quality.appendChild(qualityValue)
+        self.root.appendChild(quality)
+
+    def addHistoryItem(self, historyItem):
+        item = self.dom.createElement('Item')
+
+        tag = self.dom.createElement('Ref')
+        value = self.dom.createTextNode(historyItem.ref)
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('ID')
+        value = self.dom.createTextNode(historyItem.id)
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Name')
+        value = self.dom.createTextNode(historyItem.name)
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Quality')
+        value = self.dom.createTextNode(historyItem.quality)
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Comments')
+        value = self.dom.createTextNode(historyItem.comments)
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Date')
+        value = self.dom.createTextNode(str(historyItem.date))
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Price')
+        value = self.dom.createTextNode(str(historyItem.price))
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        tag = self.dom.createElement('Auction')
+        value = self.dom.createTextNode(str(historyItem.auctionText))
+        tag.appendChild(value)
+        item.appendChild(tag)
+
+        if self.itemList == None:
+            self.itemList = self.dom.createElement('ItemList')
+            self.root.appendChild(self.itemList)
+        self.itemList.appendChild(item)
+
+    def writeToFile(self):
+        f= open("data/" + self.searchItem.name + "_" + self.searchItem.category + "_" + self.searchItem.quality + ".xml", 'w')
+        self.dom.writexml(f, addindent='  ', newl='\n',encoding='utf-8')
+        f.close() 
+
+    def generateXml(self):
+        self.setAlias(self.searchItem.alias)
+        self.setKeyword(self.searchItem.name)
+        self.setCategory(self.searchItem.category)
+        self.setQuality(self.searchItem.quality)
+#.decode("utf-8").encode("GBK"))
+#.decode("GBK").encode("utf-8"))
+        for item in self.searchItem.historyItems:
+            self.addHistoryItem(item)
+        self.writeToFile()
+
+
+
+class TestHistoryItemParser(HTMLParser):
+    text = ""
+    def __init__(self):
+        HTMLParser.__init__(self)
+
+    def parse(self, html):
+        self.feed(html)
+
+    def handle_starttag(self,tag,attrs):
+        self.text += "tag   : " + tag + "\n"
+        self.text += "attrs : " + str(attrs) + "\n"
+        
+    def handle_data(self, data):
+        self.text += "data  : " + str(data) + "\n"
+        
+    def getText(self):
+        return self.text
+
+import random
+
+def ttt():
+    x = []
+    y = []
+    for i in range(0, 5):
+        x.append(date.fromordinal(730920 + random.randint(0, 10)))
+        y.append(random.randint(10, 20))
+    print x
+    print y
+    plt.plot(x, y)
+    plt.title('Title')
+    plt.ylabel('Price')
+    plt.xlabel('Date')
+    plt.grid(True)
+    #fig = plt.figure()
+    #fig.autofmt_xdate()
+    plt.show()
+
+def encodingTest():
+    h = '汉字'
+    u = u'汉字'
+    i = raw_input()
+    print h, h.decode("utf-8"), h.decode("utf-8").encode("GBK")
+    print u
+    print i
+
+    print urllib.pathname2url(h)
+    print urllib.pathname2url(u.encode("utf-8"))
+    print urllib.pathname2url(i.decode("gbk").encode("utf-8"))
+    return
 
 if __name__ == '__main__':
+    user = None
+    passwd = None
+    if len(sys.argv) == 1:
+        # offline mode
+        user = None
+        passwd = None
+    elif len(sys.argv) == 3:
+        user = sys.argv[1]
+        passwd = sys.argv[2]
+    else:
+        print "ERROR: wrong count of parameter"
+        print "Usage: "
+        print "  python analyzer.py <user name> <password>"
+        print "or offline mode: "
+        print "  python analyzer.py"
+
+    dataHandler = DataHandler(user, passwd)
+    for searchConditon in searchConditions:
+        dataHandler.addSearchItem(searchConditon)
     quitCommand = False
     while quitCommand == False:
         command = raw_input("[image downloader] ")
         parameters = command.split(' ', 4)
-        if len(parameters) == 0:
-            for i in len(searchConditions):
-                print "" + str(i) + ". " + searchCondition.toString()
-        elif parameters[0] == "q" or parameters[0] == "quit" or parameters[0] == "exit":
+        if parameters[0] == "q" or parameters[0] == "quit" or parameters[0] == "exit":
             quitCommand = True
-        elif parameters[0] == "d" or parameters[0] == "download":
-            if parameters[1] == "all":
-                return
+        elif parameters[0] == "list" or parameters[0] == "l":
+            searchItems = dataHandler.getAllSearchItems()
+            for searchItem in searchItems:
+                print searchItem.condition.toString().decode("utf-8")
+        
+        elif parameters[0] == "download" or parameters[0] == "d":
+            # format: download <alias>
+            if len(parameters) == 2:
+                if dataHandler.isOffLine():
+                    print "ERROR: offline mode, can't download"
+                    continue
+                alias = parameters[1]
+                if alias == 'all':
+                    searchItems = dataHandler.getAllSearchItems()
+                else:
+                    searchItems = [dataHandler.getSearchItemByAlias(alias)]
+                for searchItem in searchItems:
+                    if searchItem == None:
+                        print "ERROR: can't find alias: " + alias
+                    else:
+                        historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
+                        downloadList = []
+                        dirName = "image/" + searchItem.condition.folder
+                        if os.path.exists(dirName) == False:
+                            os.mkdir(dirName)
+                        elif os.path.isdir(dirName) == False:
+                            print '"' + dirName + '" file exist, remove it'
+                            continue
+                            
+                        # build download list at first
+                        for historyItem in historyItems:
+                            historyItemParser = HistoryItemParser()
+                            (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+                            #print historyItem.auctionData
+                            for pictureData in historyItem.auctionData.get("pictures"):
+                                #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
+                                keys = ["src", "m_size"]
+                                for key in keys:
+                                    picURL = pictureData.get(key)
+                                    if picURL <> None:
+                                        picFileName = "image/" + searchItem.condition.folder + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
+                                        downloadList.append([picURL, picFileName])
+                        # then download image one by one
+                        for i in range(0, len(downloadList)):
+                            picURL = downloadList[i][0]
+                            picFileName = downloadList[i][1]
+                            try:
+                                print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
+                                pic = dataHandler.download(picURL)
+                                if pic <> None:
+                                    picFile = open(picFileName, "wb")
+                                    picFile.write(pic)
+                                    picFile.close()
+                            except Exception, e:
+                                print e
+                                continue
             else:
-                int(parameters[1])
-                
+                print "ERROR: wrong count of parameter"
+
+
+        elif parameters[0] == "u" or parameters[0] == "update":
+            # format: show <alias>
+            if len(parameters) == 2:
+                if dataHandler.isOffLine():
+                    print "ERROR: offline mode, can't update"
+                    continue
+                alias = parameters[1]
+                if alias == 'all':
+                    searchItems = dataHandler.getAllSearchItems()
+                    for searchItem in searchItems:
+                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
+                        dataHandler.updateSearchItem(searchItem)
+                        # debug
+                        #dataHandler.dumpSearchItem(searchItem)
+                    dataHandler.printLog()
+                else:
+                    searchItem = dataHandler.getSearchItemByAlias(alias)
+                    if searchItem == None:
+                        print "ERROR: can't find alias: " + alias
+                    else:
+                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
+                        dataHandler.updateSearchItem(searchItem)
+                    dataHandler.printLog()
+            else:
+                print "ERROR: wrong count of parameter"
+        else:
+            print "ERROR: wrong command"
+
+
+
