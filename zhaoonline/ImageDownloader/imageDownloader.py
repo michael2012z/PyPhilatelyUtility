@@ -456,7 +456,8 @@ class DataHandler():
             #html = self.downloader.download(url)
             if historyItemListParser.parse(html) == False:
                 self.failureList.append(url)
-            self.saveToListFile(searchItem.condition.base+"_"+str(page), html)
+            # save the tmp file to debug
+            # self.saveToListFile(searchItem.condition.base+"_"+str(page), html)
             page += 1
         historyItemList = historyItemListParser.getHistoryItemList()
         historyItemListParser.clean()  
@@ -497,7 +498,7 @@ class DataHandler():
             historyItem.auctionText = tmpItem.auctionText
             historyItem.auctionData = tmpItem.auctionData
             # save the html content to tmp directory
-            self.saveToTmpFile(historyItem, html)
+            # self.saveToTmpFile(historyItem, html)
         return
 
     def loadAllSearchItemsFromXml(self):
@@ -763,6 +764,97 @@ def encodingTest():
     print urllib.pathname2url(i.decode("gbk").encode("utf-8"))
     return
 
+def doCommandUpdate(alias, dataHandler):
+    if True:
+        if True:
+            if True:
+                if alias == 'all':
+                    searchItems = dataHandler.getAllSearchItems()
+                    for searchItem in searchItems:
+                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
+                        dataHandler.updateSearchItem(searchItem)
+                        # debug
+                        #dataHandler.dumpSearchItem(searchItem)
+                    dataHandler.printLog()
+                else:
+                    searchItem = dataHandler.getSearchItemByAlias(alias)
+                    if searchItem == None:
+                        print "ERROR: can't find alias: " + alias
+                    else:
+                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
+                        dataHandler.updateSearchItem(searchItem)
+                    dataHandler.printLog()
+    return
+
+def doCommandDownload(alias, dataHandler):
+    if True:
+        if True:
+            if True:
+                if alias == 'all':
+                    searchItems = dataHandler.getAllSearchItems()
+                else:
+                    searchItems = [dataHandler.getSearchItemByAlias(alias)]
+                for searchItem in searchItems:
+                    if searchItem == None:
+                        print "ERROR: can't find alias: " + alias
+                    else:
+                        historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
+                        downloadList = []
+                        # make category dir
+                        dirName = searchItem.condition.folder
+                        if os.path.exists(dirName) == False:
+                            os.mkdir(dirName)
+                        elif os.path.isdir(dirName) == False:
+                            print '"' + dirName + '" file exist, remove it'
+                            continue
+                        # make sub dir
+                        subDirNames = ["src", "m_size", "back"]
+                        for subDirName in subDirNames:
+                            subDir = dirName + "/" + subDirName
+                            if os.path.exists(subDir) == False:
+                                os.mkdir(subDir)
+                            elif os.path.isdir(subDir) == False:
+                                print '"' + subDir + '" file exist, remove it'
+                            continue
+                            
+                        # build download list at first
+                        for historyItem in historyItems:
+                            historyItemParser = HistoryItemParser()
+                            (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
+                            #print historyItem.auctionData
+                            pictureData = historyItem.auctionData.get("pictures")
+                            # download picture face image
+                            facePictureData = pictureData[0]
+                            # download src image
+                            keys = ["src", "m_size"]
+                            for key in keys:
+                                picURL = facePictureData.get(key)
+                                if picURL <> None:
+                                    picFileName = searchItem.condition.folder + "/" + key + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
+                                    downloadList.append([picURL, picFileName])
+                            # download picture back image
+                            backPictureData = pictureData[1]
+                            key = "src"
+                            picURL = backPictureData.get(key)
+                            if picURL <> None:
+                                picFileName = searchItem.condition.folder + "/" + "back" + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
+                                downloadList.append([picURL, picFileName])
+                        # then download image one by one
+                        for i in range(0, len(downloadList)):
+                            picURL = downloadList[i][0]
+                            picFileName = downloadList[i][1]
+                            try:
+                                print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
+                                pic = dataHandler.download(picURL)
+                                if pic <> None:
+                                    picFile = open(picFileName, "wb")
+                                    picFile.write(pic)
+                                    picFile.close()
+                            except Exception, e:
+                                print e
+                                continue
+    return
+
 if __name__ == '__main__':
     user = None
     passwd = None
@@ -801,79 +893,33 @@ if __name__ == '__main__':
                     print "ERROR: offline mode, can't download"
                     continue
                 alias = parameters[1]
-                if alias == 'all':
-                    searchItems = dataHandler.getAllSearchItems()
-                else:
-                    searchItems = [dataHandler.getSearchItemByAlias(alias)]
-                for searchItem in searchItems:
-                    if searchItem == None:
-                        print "ERROR: can't find alias: " + alias
-                    else:
-                        historyItems = sorted(searchItem.historyItems, key=lambda x: x.date)
-                        downloadList = []
-                        dirName = "image/" + searchItem.condition.folder
-                        if os.path.exists(dirName) == False:
-                            os.mkdir(dirName)
-                        elif os.path.isdir(dirName) == False:
-                            print '"' + dirName + '" file exist, remove it'
-                            continue
-                            
-                        # build download list at first
-                        for historyItem in historyItems:
-                            historyItemParser = HistoryItemParser()
-                            (xxx, historyItem.auctionData) = historyItemParser.parsePureAuctionData(historyItem.auctionText)
-                            #print historyItem.auctionData
-                            for pictureData in historyItem.auctionData.get("pictures"):
-                                #keys = ["src", "s1_size", "s2_size", "s3_size", "ss_size", "m_size"]
-                                keys = ["src", "m_size"]
-                                for key in keys:
-                                    picURL = pictureData.get(key)
-                                    if picURL <> None:
-                                        picFileName = "image/" + searchItem.condition.folder + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
-                                        downloadList.append([picURL, picFileName])
-                        # then download image one by one
-                        for i in range(0, len(downloadList)):
-                            picURL = downloadList[i][0]
-                            picFileName = downloadList[i][1]
-                            try:
-                                print "(" + str(i) + "/" + str(len(downloadList))+ ") downloading image: " + picURL
-                                pic = dataHandler.download(picURL)
-                                if pic <> None:
-                                    picFile = open(picFileName, "wb")
-                                    picFile.write(pic)
-                                    picFile.close()
-                            except Exception, e:
-                                print e
-                                continue
+                doCommandDownload(alias, dataHandler)
             else:
                 print "ERROR: wrong count of parameter"
 
-
         elif parameters[0] == "u" or parameters[0] == "update":
-            # format: show <alias>
+            # format: update <alias>
             if len(parameters) == 2:
                 if dataHandler.isOffLine():
                     print "ERROR: offline mode, can't update"
                     continue
                 alias = parameters[1]
-                if alias == 'all':
-                    searchItems = dataHandler.getAllSearchItems()
-                    for searchItem in searchItems:
-                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
-                        dataHandler.updateSearchItem(searchItem)
-                        # debug
-                        #dataHandler.dumpSearchItem(searchItem)
-                    dataHandler.printLog()
-                else:
-                    searchItem = dataHandler.getSearchItemByAlias(alias)
-                    if searchItem == None:
-                        print "ERROR: can't find alias: " + alias
-                    else:
-                        print "updating searchItem: " + searchItem.condition.toString().decode("utf-8")
-                        dataHandler.updateSearchItem(searchItem)
-                    dataHandler.printLog()
+                doCommandUpdate(alias, dataHandler)
             else:
                 print "ERROR: wrong count of parameter"
+
+        elif parameters[0] == "f" or parameters[0] == "finish":
+            # format: finish <alias>
+            if len(parameters) == 2:
+                if dataHandler.isOffLine():
+                    print "ERROR: offline mode, can't update"
+                    continue
+                alias = parameters[1]
+                doCommandUpdate(alias, dataHandler)
+                doCommandDownload(alias, dataHandler)
+            else:
+                print "ERROR: wrong count of parameter"
+                
         else:
             print "ERROR: wrong command"
 
