@@ -824,6 +824,8 @@ def doCommandDownload(alias, dataHandler):
                             #print historyItem.auctionData
                             pictureData = historyItem.auctionData.get("pictures")
                             # download picture face image
+                            if len(pictureData) < 1: # no image data
+                                continue
                             facePictureData = pictureData[0]
                             # download src image
                             keys = ["src", "m_size"]
@@ -831,14 +833,18 @@ def doCommandDownload(alias, dataHandler):
                                 picURL = facePictureData.get(key)
                                 if picURL <> None:
                                     picFileName = searchItem.condition.folder + "/" + key + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
-                                    downloadList.append([picURL, picFileName])
+                                    if os.path.exists(picFileName) == False:
+                                        downloadList.append([picURL, picFileName])
                             # download picture back image
+                            if len(pictureData) < 2: # no back image data
+                                continue
                             backPictureData = pictureData[1]
                             key = "src"
                             picURL = backPictureData.get(key)
                             if picURL <> None:
                                 picFileName = searchItem.condition.folder + "/" + "back" + "/" + picURL.split("/")[-3] + "_" + picURL.split("/")[-2] + "_" + picURL.split("/")[-1]
-                                downloadList.append([picURL, picFileName])
+                                if os.path.exists(picFileName) == False:
+                                    downloadList.append([picURL, picFileName])
                         # then download image one by one
                         for i in range(0, len(downloadList)):
                             picURL = downloadList[i][0]
